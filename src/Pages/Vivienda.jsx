@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from "react";
 import { DataContext } from "../context/Data.context.jsx";
 
+
 function Viviendas() {
 const{allData, setAllData}= useContext(DataContext)
 
@@ -12,6 +13,7 @@ const{allData, setAllData}= useContext(DataContext)
         return(<div key={i}>{eachElemnt.name}
         <img src={eachElemnt.image} style={{width: "200px"}}/>
         <p>{eachElemnt.price} €</p>
+        
         </div>
       )}
       
