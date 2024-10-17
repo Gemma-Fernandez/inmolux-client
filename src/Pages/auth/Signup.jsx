@@ -67,7 +67,7 @@ function Signup() {
 
   return (
     <div>
-      <h2> Form Signup</h2>
+      <h2>Be part of InmoLux</h2>
       <form onSubmit={handleSignup}>
         <label>Image Profile:</label>
         <input type="file"

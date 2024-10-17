@@ -78,6 +78,9 @@ function Login() {
         <button type="submit">Acceder</button>
 
         {errorMessage && <p>{errorMessage}</p>}
+
+        <p>Haven't you sign up yet?</p>
+        <a href="/signup">Sign up here!</a>
       </form>
     </div>
   );
