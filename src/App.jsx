@@ -11,6 +11,8 @@ import ErrorPage from"./Pages/ErrorPage"
 import UserProfile from "./Pages/UserProfile";
 import { DataWrapper } from "./context/Data.context.jsx";
 import NavBar from "./components/NavBar"
+import Footer from "./components/footer/Footer";
+import PrivateRoute from "./components/PrivateRoute"
 
 function App() {
   return (
@@ -22,12 +24,13 @@ function App() {
           <Route path={"/login"} element={<Login />} />
           <Route path={"/signup"} element={<Signup />} />
           <Route path={"/vivienda"} element={<Vivienda />} />
-          <Route path={"/user/:userId"} element={<UserProfile />} />
-          <Route path={"/vivienda/:viviendasId"} element={<ViviendasDetails />}/>
+          <Route path={"/user/profile"} element={<UserProfile />} />
+          <Route path={"/vivienda/:viviendasId"} element={<PrivateRoute> <ViviendasDetails /> </PrivateRoute>}/>
           <Route path={"/admin/:adminId"} element={<AdminProfile />} />
           <Route path={"*"} element={<NotFound />} />
           <Route path={"/500"} element={<ErrorPage/>} />
         </Routes>
+        <Footer/>
       </DataWrapper>
     </div>
   );

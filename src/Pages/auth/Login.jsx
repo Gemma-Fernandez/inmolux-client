@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/auth.context";
 
 function Login() {
   const navigate = useNavigate();
-  const { authenticateUser, setAdmin, user} = useContext(AuthContext);
+  const { authenticateUser, setAdmin, user, setUser, setIsLoggedIn} = useContext(AuthContext);
  
 
   const [email, setEmail] = useState("");
@@ -22,25 +22,25 @@ function Login() {
     try {
       const userCredentials = {
         email,
-        password,
+        password
       };
 
       const response = await service.post("/auth/login", userCredentials);
 
-      console.log(`Maluuuuuuuuuuuuuuuuu`, response);
+      
 
       localStorage.setItem("authToken", response.data.authToken);
-
+//console.log(response.data.authToken)
       await authenticateUser();
-      console.log(user)
 
+    /*console.log(response.data.user)
       if (user.role === "admin") {
         const adminId = user._id; 
         setAdmin(true);
         navigate(`/admin/${adminId}`);
-      } else {
+      } else {*/
         navigate(`/vivienda`);
-      }
+      /*}*/
      
     } catch (error) {
       console.log(error);

@@ -1,25 +1,29 @@
-import React from 'react'
+import React from "react";
 import { useContext } from "react";
 import { DataContext } from "../context/Data.context.jsx";
+import { Link } from "react-router-dom";
 
 
 function Viviendas() {
-const{allData, setAllData}= useContext(DataContext)
+  const { allData, isLoggedIn, admin, user } = useContext(DataContext);
 
   return (
     <div>
       <h1>Viviendas</h1>
-      {allData.map((eachElemnt, i) => {
-        return(<div key={i}>{eachElemnt.name}
-        <img src={eachElemnt.image} style={{width: "200px"}}/>
-        <p>{eachElemnt.price} €</p>
-        
-        </div>
-      )}
-      
-      )}
+      {allData.map((eachElemnt) => {
+        return (
+          <div key={eachElemnt._id}>
+            <Link  to={`/vivienda/${eachElemnt._id} `}>
+              {eachElemnt.name}
+              <img src={eachElemnt.image} style={{ width: "200px" }} />
+              <p>{eachElemnt.price} €</p>
+            </Link>
+           
+          </div>
+        );
+      })}
     </div>
-  )
+  );
 }
 
-export default Viviendas
+export default Viviendas;

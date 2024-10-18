@@ -54,6 +54,7 @@ function Signup() {
         password,
         profile_image: imageUrl
       }
+      
       await service.post("/auth/signup", newUser)
       alert(`Bienvenido a InmoLux ${newUser.username}!`)
       navigate("/login")

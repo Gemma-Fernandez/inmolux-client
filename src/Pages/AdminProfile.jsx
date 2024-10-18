@@ -26,7 +26,7 @@ function AdminProfile() {
     <div>
       <h1>Perfil do Admin</h1>
       <p>ID do Admin: {adminId}</p>
-      { isLoggedIn && <Link onClick={logOutUser}>LogOut</Link>}
+      { isLoggedIn && <Link onClick={logOutUser} to="/vivienda">LogOut</Link>}
       {isLoggedIn && admin && <span>usuario admin</span> }
     </div>
   )
