@@ -1,14 +1,17 @@
 #root {
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
+
+
 .background-video-container{
   position:relative;
   overflow: hidden;
   width: 100%;
   height: 100vh;
+  
   
 }
 .background-video{
@@ -19,8 +22,8 @@
   z-index: -1; /* Asegúrate de que esté detrás del contenido */
   object-fit: cover;
   object-fit:cover;
-  opacity: 0.6
- 
+  opacity: 0.6;
+ box-shadow: 0px 10px 20px rgb(129, 127, 127);
 }
 .content{
   position:relative;
@@ -29,3 +32,126 @@
   color:white;
   top:200px
 }
+
+/*small*/
+@media (max-width: 768px) {
+  .background-video {
+    width: 100vw;  
+    height: auto;  
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0px 15px 20px rgb(129, 127, 127);
+  }
+
+  .content {
+    font-size: 1rem; 
+    top: 13%;
+    opacity: 0.4;
+    z-index: -1;
+  }
+}
+
+/*Big*/
+@media (min-width: 1024px) {
+  .background-video {
+    width: 100vw;  
+    height: auto;  
+    margin: auto;
+    margin-top: 20px;
+    
+  }
+
+  .content {
+    font-size: 3rem; 
+    top: 50%;
+    opacity: 0.4;
+    z-index: -1;
+  }
+
+}
+
+
+/*Navbar*/
+
+.navbar-container {
+display:flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+background: url("https://img.freepik.com/free-photo/room-structure-wall-background-wallpaper-texture-concept_53876-31786.jpg?t=st=1729193563~exp=1729197163~hmac=aaebef21c538eb5d7e0e4ea7fb4f2a6841f9f0d7a7edbf8cedf6eee49e3a1617&w=740");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+opacity: 0.5;
+z-index: -1;
+margin-bottom: 20px;
+
+}
+
+.navbar-container-icons {
+  display:flex;
+  gap: 4px;
+}
+
+.icons-navbar {
+  color: rgb(245, 243, 240);
+  width: 30px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+/*Signup*/
+
+.title-container{
+  width: 100%;
+  padding: 1.5em 2.5rem;
+  border-bottom: 1px solid grey; 
+  background: url('https://img.freepik.com/free-photo/stylish-scandinavian-living-room-with-design-mint-sofa-furnitures-mock-up-poster-map-plants-eleg_1258-152143.jpg?t=st=1729196024~exp=1729199624~hmac=4ae1bb8350b514915dc91823dd747e1a573891d8345d108b6067e1464fd1776c&w=1380');
+  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding: 40px;
+opacity: 0.4;
+z-index: -1;
+}
+
+.form-title-signup {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  font-size: 25px;
+  color: #0d6c79;
+  font-weight: lighter;
+  font-style: italic;
+  text-shadow: 2px 1px 10px #074d57;
+  z-index: 1;
+  position: relative;
+  animation: fadeIn 2s ease-in-out;
+  margin-right: 30px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
