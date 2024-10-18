@@ -1,4 +1,6 @@
-{
+
+[
+  {
    
   "name": "Marzo Best Offer LM7",
   "city": "Madrid",
@@ -9,4 +11,112 @@
   "image": "https://img.freepik.com/foto-gratis/vista-lujosa-villa-diseno-arquitectonico-moderno_23-2151694114.jpg?t=st=1729085820~exp=1729089420~hmac=78f4427d07ac694938f46da37b5a11c1f5cc37e5b60101c44efdde9849e2769c&w=740",
   "price": 1500
  
-}
+},
+{
+    "name": "Valencia Grand Suite",
+    "city": "Valencia",
+    "description": "Exclusivo apartamento de lujo frente a la playa de la Malvarrosa, con vistas espectaculares al mar Mediterráneo. Cuenta con una amplia terraza, cocina equipada de alta gama y espacios de diseño vanguardista.",
+    "property_type": "apartment",
+    "bathrooms": "3",
+    "bedrooms": "3",
+    "image": "https://img.freepik.com/foto-gratis/apartamento-moderno-vistas-al-mar_23-2149359487.jpg",
+    "price": 3500
+    
+  },
+  {
+    
+    "name": "Barcelona Penthouse Deluxe",
+    "city": "Barcelona",
+    "description": "Ático de lujo en la zona más exclusiva de Paseo de Gracia. Ofrece vistas panorámicas a la Sagrada Familia y al mar. Decorado por un reconocido diseñador de interiores, es el lugar perfecto para disfrutar del lujo y la comodidad en Barcelona.",
+    "property_type": "apartment",
+    "bathrooms": "4",
+    "bedrooms": "5",
+    "image": "https://img.freepik.com/foto-gratis/atico-lujoso-terraza-vistas-panoramicas_23-2148975550.jpg",
+    "price": 6000
+    
+  },
+  {
+    
+    "name": "Sevilla Luxury Retreat",
+    "city": "Sevilla",
+    "description": "Apartamento de lujo en un edificio histórico del centro de Sevilla, con acceso privado y una gran terraza con vistas a la Giralda. Dispone de interiores modernos y un diseño único que combina lo clásico con lo contemporáneo.",
+    "property_type": "apartment",
+    "bathrooms": "3",
+    "bedrooms": "3",
+    "image": "https://img.freepik.com/foto-gratis/terraza-privada-centro-ciudad-historica_23-2148856989.jpg",
+    "price": 4000
+    
+  },
+  {
+    
+    "name": "Málaga Sky Residence",
+    "city": "Málaga",
+    "description": "Este apartamento de lujo en la Torre del Puerto ofrece vistas inigualables a la costa malagueña y al mar. Cuenta con piscina privada, gimnasio y servicios exclusivos para residentes. El lugar ideal para disfrutar de la Costa del Sol.",
+    "property_type": "apartment",
+    "bathrooms": "3",
+    "bedrooms": "4",
+    "image": "https://img.freepik.com/foto-gratis/apartamento-lujo-vista-panoramica-costa_23-2148998897.jpg",
+    "price": 4800
+    
+  },
+  {
+    
+    "name": "Bilbao Modern Loft",
+    "city": "Bilbao",
+    "description": "Moderno loft de lujo en el corazón del Casco Viejo de Bilbao, con techos altos y ventanales que ofrecen vistas al Museo Guggenheim. Un espacio único para quienes valoran el arte y la exclusividad en una de las ciudades más vibrantes de España.",
+    "property_type": "apartment",
+    "bathrooms": "2",
+    "bedrooms": "2",
+    "image": "https://img.freepik.com/foto-gratis/loft-moderno-vistas-museo_23-2149210172.jpg",
+    "price": 3700
+    
+  },
+  {
+    
+    "name": "Ibiza Beachfront Escape",
+    "city": "Ibiza",
+    "description": "Increíble apartamento de lujo a pie de playa en Ibiza, con acceso directo al mar y una terraza privada para disfrutar de los atardeceres. Ideal para quienes buscan un refugio de lujo en una de las islas más exclusivas del Mediterráneo.",
+    "property_type": "apartment",
+    "bathrooms": "2",
+    "bedrooms": "3",
+    "image": "https://img.freepik.com/foto-gratis/apartamento-playa-lujo-terraza-vista-mar_23-2149098234.jpg",
+    "price": 5500
+    
+  },
+  {
+    
+    "name": "Granada Alhambra Views",
+    "city": "Granada",
+    "description": "Apartamento de lujo en el Albaicín con impresionantes vistas a la Alhambra y a Sierra Nevada. Una mezcla perfecta entre el estilo tradicional andaluz y las comodidades modernas. El lugar perfecto para vivir la magia de Granada.",
+    "property_type": "apartment",
+    "bathrooms": "3",
+    "bedrooms": "4",
+    "image": "https://img.freepik.com/foto-gratis/apartamento-vistas-alhambra-terraza_23-2148967534.jpg",
+    "price": 4200
+    
+  },
+  {
+   
+    "name": "Marbella Golden Mile",
+    "city": "Marbella",
+    "description": "Apartamento de lujo en la Milla de Oro de Marbella, a pocos minutos del puerto deportivo de Puerto Banús. Espacioso, con piscina comunitaria y un diseño interior de alto nivel. Ideal para disfrutar de la exclusividad de la Costa del Sol.",
+    "property_type": "apartment",
+    "bathrooms": "4",
+    "bedrooms": "5",
+    "image": "https://img.freepik.com/foto-gratis/apartamento-lujo-piscina-comunitaria_23-2148905437.jpg",
+    "price": 7500
+    
+  },
+  {
+     "name": "San Sebastián Oceanview",
+    "city": "San Sebastián",
+    "description": "Lujoso apartamento con vistas a la Bahía de La Concha. Decoración moderna, con una gran terraza para disfrutar del paisaje y la brisa del Cantábrico. La opción perfecta para vivir en uno de los lugares más bellos del norte de España.",
+    "property_type": "apartment",
+    "bathrooms": "2",
+    "bedrooms": "3",
+    "image": "https://img.freepik.com/foto-gratis/apartamento-vista-oceanica-terraza_23-2149047392.jpg",
+    "price": 5200
+    
+  }
+
+]

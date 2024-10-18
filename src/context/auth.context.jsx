@@ -36,12 +36,6 @@ function AuthWrapper({children}) {
     }
   };
 
-  /*//logOut
-  const logOutUser = () => {
-    localStorage.removeItem("authToken");
-    setIsLoggedIn(false);
-    setUser(null);
-  };*/
 
   const passedContext = {
     isLoggedIn,

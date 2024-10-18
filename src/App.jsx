@@ -24,9 +24,9 @@ function App() {
           <Route path={"/login"} element={<Login />} />
           <Route path={"/signup"} element={<Signup />} />
           <Route path={"/vivienda"} element={<Vivienda />} />
-          <Route path={"/user/profile"} element={<UserProfile />} />
+          <Route path={"/user/:profile"} element={<UserProfile />} />
           <Route path={"/vivienda/:viviendasId"} element={<PrivateRoute> <ViviendasDetails /> </PrivateRoute>}/>
-          <Route path={"/admin/:adminId"} element={<AdminProfile />} />
+          <Route path={"/admin/profile"} element={<AdminProfile />} />
           <Route path={"*"} element={<NotFound />} />
           <Route path={"/500"} element={<ErrorPage/>} />
         </Routes>

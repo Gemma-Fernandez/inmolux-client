@@ -43,11 +43,11 @@ function NavBar() {
         {isLoggedIn ? (
           <>
             {admin ? (
-              <Link to="/admin/adminId">
+              <Link to="/admin/profile">
                 <FaUserEdit className="icon-vivienda" />
               </Link>
             ) : (
-              <Link to="/user/userId">
+              <Link to="/user/profile">
                 <FaUserEdit className="icon-vivienda" />
               </Link>
             )}
