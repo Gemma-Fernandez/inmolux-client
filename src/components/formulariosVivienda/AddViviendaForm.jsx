@@ -6,8 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import service from "../../services/config.js";
 import "./Formularios.css"
+<<<<<<< HEAD
 import axios from "axios"
 
+=======
+>>>>>>> 1e320dc (formularios)
 
 
 
@@ -23,6 +26,7 @@ function AddViviendaForm() {
   const [property_type, setProperty_type] = useState("");
   const [bathrooms, setBathrooms] = useState("");
   const [bedrooms, setBedrooms] = useState("");
+<<<<<<< HEAD
   const [price, setPrice] = useState("");
   
   const [imageUrl, setImageUrl] = useState(null); //cloudinary
@@ -47,6 +51,10 @@ function AddViviendaForm() {
       navigate("/500")
     }
   }
+=======
+  const [image, setImage] = useState("");
+  const [price, setPrice] = useState("");
+>>>>>>> 1e320dc (formularios)
 
  const handleSubmit= async (event)=>{
     event.preventDefault();
@@ -58,7 +66,11 @@ function AddViviendaForm() {
         property_type,
         bathrooms,
         bedrooms,
+<<<<<<< HEAD
         image: imageUrl,
+=======
+        image,
+>>>>>>> 1e320dc (formularios)
         price
     }
     try {
@@ -90,6 +102,17 @@ function AddViviendaForm() {
         <br />
         <input
           type="text"
+<<<<<<< HEAD
+=======
+          name="image"
+          value={image}
+          onChange={(event)=> setImage(event.target.value)}
+          placeholder="image"
+        />
+        <br />
+        <input
+          type="text"
+>>>>>>> 1e320dc (formularios)
           name="city"
           value={city}
           onChange={(event)=> setCity(event.target.value)}
@@ -137,6 +160,7 @@ function AddViviendaForm() {
           placeholder="Price"
         />
         <br />
+<<<<<<< HEAD
         <input
           type="file"
           name="image"
@@ -146,6 +170,8 @@ function AddViviendaForm() {
         {imageUrl ? (<div><img src={imageUrl} alt="img" width={200} /></div>) : null}
         {isUploading ? <h3>... uploading image</h3> : null}
         <br />
+=======
+>>>>>>> 1e320dc (formularios)
         <button className="buttonAdd" onClick={handleSubmit} type="submit">Save change</button>
       </form>
     </div>
