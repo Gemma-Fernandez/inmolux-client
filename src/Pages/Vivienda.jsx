@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa6";
 import { WishlistContext } from "../context/Wishlist.context.jsx";
 
-function Viviendas() {
+function Vivienda() {
   const { addWish, removeWish, wishlist } = useContext(WishlistContext);
 const [viviendas, setViviendas] = useState([])
 
@@ -37,15 +37,17 @@ const inList = (viviendasId) => {
         return (
           <div key={eachElemnt._id} className='vivienda-card'>
             <Link to={`/vivienda/${eachElemnt._id} `}className="vivienda-link">
+            <img src={eachElemnt.image} className="vivienda-image"/>
             <h3 className="description-vivienda">{eachElemnt.name}</h3>
-              <img src={eachElemnt.image} className="vivienda-image"/>
-              <p className="description-vivienda">{eachElemnt.price} €</p>
+            </Link>
+              <p className="description-price">{eachElemnt.price} €</p>
               <button type='button' 
               className='whish-button-green '
-              onClick={() => inList(eachElemnt._id) ? removeWish(eachElemnt._id) : addWish(eachElemnt._id)}>
+              onClick={(e) => {e.stopPropagation(); 
+                inList(eachElemnt._id) ? removeWish(eachElemnt._id) : addWish(eachElemnt._id)}}>
                 <FaHeart style={{ color: inList(eachElemnt._id) ? '#074d57' : 'gray' }} />
               </button>
-            </Link>
+            
           </div>
         );
       })}
@@ -54,4 +56,4 @@ const inList = (viviendasId) => {
   );
 }
 
-export default Viviendas;
+export default Vivienda;

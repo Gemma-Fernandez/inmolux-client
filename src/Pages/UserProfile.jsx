@@ -108,45 +108,51 @@ function UserProfile() {
   };
 
   return (
-    <div>
-      <h1>User profile:</h1>
-      <div>
-        <h2>{userData.username}</h2>
+    <div className='profile-container'>
+      <div className='profile-image'>
+      <h1 className='profile-title'>{userData.username} profile</h1>
+        <img
+        className='image'
+          src={userData.profile_image}
+          alt="Profile"
+        />
+        </div>
+
+
+      <div className='profile-name-email-edit'>
+        <div className='profile-name'>
+        <p className='profile-name'>{userData.username}</p>
         <>
         {isEditingUsername ? (
-          <div>
+          <div className='profile-drop'>
             <input type="text" value={newUserName} onChange={handleUserNameChange} />
-            <button onClick={handleUserNameEdit}>Send</button>
-            <button onClick={() => setIsEditingUsername(false)}>Cancelar</button>
+            <button className='button-profile' onClick={handleUserNameEdit}>Enviar</button>
+            <button className='button-cancelar' onClick={() => setIsEditingUsername(false)}>Cancelar</button>
           </div>
         ) : (
-          <button onClick={() => {
-            setNewUserName(userData.newUserName);
+          <button className='button-profile' onClick={() => {
+            setNewUserName(userData.username);
             setIsEditingUsername(true);
           }}>Editar Username</button>
         )}
         {errorMessage && <p>{errorMessage}</p>}
       </>
-        <br/>
-        <img
-          src={userData.profile_image}
-          style={{ width: "200px", borderRadius: "50%" }}
-          alt="Profile"
-        />
-        <p>Email: {userData.email}</p>
+      </div>
+      <div className='profile-email'>
+      <p className='profile-email'>{userData.email}</p>
         {isEditing ? (
-          <div>
+          <div className='profile-drop'>
             <input type="email" value={newEmail} onChange={handleEmailChange} />
-            <button onClick={handleEmailEdit}>Send</button>
-            <button onClick={() => setIsEditing(false)}>Cancelar</button>
+            <button className='button-profile' onClick={handleEmailEdit}>Enviar</button>
+            <button className='button-cancelar'onClick={() => setIsEditing(false)}>Cancelar</button>
           </div>
         ) : (
-          <button onClick={() => setIsEditing(true)}>Editar e-mail</button>
+          <button className='button-profile' onClick={() => setIsEditing(true)}>Editar e-mail</button>
         )}
         {errorMessage && <p>{errorMessage}</p>}
+        </div>
       </div>
-      <p>Role: {userData.role}</p>
-    </div>
+      </div>
   )
 }
 
