@@ -12,11 +12,8 @@ import UserProfile from "./Pages/UserProfile";
 import NavBar from "./components/NavBar"
 import Footer from "./components/footer/Footer";
 import PrivateRoute from "./components/PrivateRoute"
-<<<<<<< HEAD
 import EditForm from "./components/formulariosVivienda/EditForm"
-=======
 import ShowWishlist from "./Pages/ShowWishlist";
->>>>>>> fb03060 (user profile)
 
 function App() {
   return (
