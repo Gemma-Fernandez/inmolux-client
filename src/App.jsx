@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/footer/Footer";
 import PrivateRoute from "./components/PrivateRoute"
 import EditForm from "./components/formulariosVivienda/EditForm"
+import ShowWishlist from "./Pages/ShowWishlist";
 import AddViviendaForm from "./components/formulariosVivienda/AddViviendaForm"
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path={"/signup"} element={<Signup />} />
           <Route path={"/vivienda"} element={<Vivienda />} />
           <Route path={"/user/:profile"} element={<UserProfile />} />
+          <Route path={"/user/wishlist"} element={<ShowWishlist />} />
           <Route path={"/vivienda/:viviendasId"} element={<PrivateRoute> <ViviendasDetails /> </PrivateRoute>}/>
           <Route path={"vivienda/:viviendasId/edit"} element={<PrivateRoute> <EditForm/> </PrivateRoute>}/>
           <Route path={"/vivienda/addVivienda"} element={<PrivateRoute><AddViviendaForm/></PrivateRoute>}/>

@@ -10,7 +10,6 @@ import { IoMdLogOut } from "react-icons/io";
 import { FaUserEdit } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Wishlist from "./Wishlist/Wishlist.jsx";
-import Desplegable from "./Desplegable/Desplegable.jsx";
 
 
 import React from "react";
@@ -61,8 +60,9 @@ function NavBar() {
                 title="Logout"
               />
             </Link>
-            <Wishlist />
+            
             <Link>
+            <Wishlist />
             </Link>
           </>
         ) : (
@@ -83,4 +83,4 @@ function NavBar() {
 
 export default NavBar;
 
- //<Desplegable/> estoy trabajando aqui 
+ 
