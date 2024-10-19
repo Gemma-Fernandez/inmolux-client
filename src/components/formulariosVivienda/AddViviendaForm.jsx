@@ -7,10 +7,13 @@ import { useState } from "react";
 import service from "../../services/config.js";
 import "./Formularios.css"
 <<<<<<< HEAD
+<<<<<<< HEAD
 import axios from "axios"
 
 =======
 >>>>>>> 1e320dc (formularios)
+=======
+>>>>>>> 5511920 (formularios)
 
 
 
@@ -26,6 +29,7 @@ function AddViviendaForm() {
   const [property_type, setProperty_type] = useState("");
   const [bathrooms, setBathrooms] = useState("");
   const [bedrooms, setBedrooms] = useState("");
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [price, setPrice] = useState("");
   
@@ -55,6 +59,10 @@ function AddViviendaForm() {
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
 >>>>>>> 1e320dc (formularios)
+=======
+  const [image, setImage] = useState("");
+  const [price, setPrice] = useState("");
+>>>>>>> 5511920 (formularios)
 
  const handleSubmit= async (event)=>{
     event.preventDefault();
@@ -66,9 +74,7 @@ function AddViviendaForm() {
         property_type,
         bathrooms,
         bedrooms,
-        image1: imageUrl,
-        image2: imageUrl,
-        image3: imageUrl,
+        image,
         price
     }
     try {
@@ -101,7 +107,10 @@ function AddViviendaForm() {
         <input
           type="text"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 5511920 (formularios)
           name="image"
           value={image}
           onChange={(event)=> setImage(event.target.value)}
@@ -110,7 +119,10 @@ function AddViviendaForm() {
         <br />
         <input
           type="text"
+<<<<<<< HEAD
 >>>>>>> 1e320dc (formularios)
+=======
+>>>>>>> 5511920 (formularios)
           name="city"
           value={city}
           onChange={(event)=> setCity(event.target.value)}
@@ -160,7 +172,11 @@ function AddViviendaForm() {
         <br />
         <input
           type="file"
+<<<<<<< HEAD
           name="image3"
+=======
+          name="image"
+>>>>>>> 5511920 (formularios)
           onChange={handleFileUpload}
           disabled={isUploading}
         />
