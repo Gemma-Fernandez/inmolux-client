@@ -22,6 +22,8 @@ function DataWrapper({ children }) {
     }
   };
 
+  
+
   return (
     <DataContext.Provider value={{ allData, setAllData}}>
       {children}

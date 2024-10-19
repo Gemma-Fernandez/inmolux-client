@@ -1,13 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import {DataContext} from "../context/Data.context"
+import { useParams, Link, useNavigate } from "react-router-dom";
+import {DataContext} from "../context/Data.context";
+import { AuthContext } from "../context/auth.context";
 import { useContext } from "react";
-
+import service from "../services/config.js";
 
 function ViviendasDetails() {
-  const {allData}= useContext(DataContext)
+  const {allData, setAllData}= useContext(DataContext)
+  const{authenticateUser, admin}=useContext(AuthContext)
   const {viviendasId} = useParams();
+  const navigate= useNavigate();
+
+
 
   const [viviendaToShow, setViviendaToShow] = useState(null);
 
@@ -16,6 +21,19 @@ function ViviendasDetails() {
     setViviendaToShow(vivienda);
   }, [allData, viviendasId] );
 
+  const handleDelete= async()=>{
+    try {      
+      const response= await service.delete(`/vivienda/${viviendasId}`)
+      setAllData((newData)=> newData.filter((element)=> element._id !==viviendasId))
+      
+      localStorage.setItem("authToken", response.data.authToken);
+      console.log(response.data.authToken)
+      await authenticateUser();
+      navigate("/vivienda");
+    } catch (error) {
+      console.log(error)
+    }
+  }
   
 
   return (
@@ -30,6 +48,13 @@ function ViviendasDetails() {
           <p>Bathrooms: {viviendaToShow.bathrooms}</p>
           <p>Bedrooms: {viviendaToShow.bedrooms}</p>
           <p>{viviendaToShow.price} €</p>
+          {admin? (
+          <Link to={`/vivienda/${viviendasId}/edit`}>
+            <button>Edit Vivienda</button>
+          </Link>  
+          ): null}
+          {admin ? (<button onClick={handleDelete} >Delete</button>) : null
+          }
         </>
       ) : (
         <p>Loading...</p>
