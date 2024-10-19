@@ -24,7 +24,6 @@ useEffect(() => {
   getViviendas()
 }, [])
 
-
 const inList = (viviendasId) => {
   return wishlist.some((item) => item._id === viviendasId)
 }
