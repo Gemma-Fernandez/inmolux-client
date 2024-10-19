@@ -142,6 +142,11 @@ function AdminProfile() {
         {errorMessage && <p>{errorMessage}</p>}
       </div>
       <p>Role: {userData.role}</p>
+      <div>
+        <Link to={"/vivienda/addVivienda"}>
+        <button>Add new apartment</button>
+        </Link>
+      </div>
     </div>
   );
 }

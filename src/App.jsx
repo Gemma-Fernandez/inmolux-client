@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/footer/Footer";
 import PrivateRoute from "./components/PrivateRoute"
 import EditForm from "./components/formulariosVivienda/EditForm"
+import AddViviendaForm from "./components/formulariosVivienda/AddViviendaForm"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path={"/user/:profile"} element={<UserProfile />} />
           <Route path={"/vivienda/:viviendasId"} element={<PrivateRoute> <ViviendasDetails /> </PrivateRoute>}/>
           <Route path={"vivienda/:viviendasId/edit"} element={<PrivateRoute> <EditForm/> </PrivateRoute>}/>
+          <Route path={"/vivienda/addVivienda"} element={<PrivateRoute><AddViviendaForm/></PrivateRoute>}/>
           <Route path={"/admin/profile"} element={<AdminProfile />} />
           <Route path={"*"} element={<NotFound />} />
           <Route path={"/500"} element={<ErrorPage/>} />
