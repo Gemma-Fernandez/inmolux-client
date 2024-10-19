@@ -9,6 +9,8 @@ import { TiHome } from "react-icons/ti";
 import { IoMdLogOut } from "react-icons/io";
 import { FaUserEdit } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Wishlist from "./Wishlist/Wishlist.jsx";
+import Desplegable from "./Desplegable/Desplegable.jsx";
 
 
 import React from "react";
@@ -32,6 +34,7 @@ function NavBar() {
   console.log(user);
   return (
     <div className="navbar-container">
+
       <Link to="/">
         <img src={logo1} alt="logo" style={{ width: "150px" }} />
       </Link>
@@ -58,6 +61,9 @@ function NavBar() {
                 title="Logout"
               />
             </Link>
+            <Wishlist />
+            <Link>
+            </Link>
           </>
         ) : (
           <>
@@ -69,9 +75,12 @@ function NavBar() {
             </Link>
           </>
         )}
+        
       </div>
     </div>
   );
 }
 
 export default NavBar;
+
+ //<Desplegable/> estoy trabajando aqui 

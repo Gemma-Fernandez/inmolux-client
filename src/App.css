@@ -163,3 +163,136 @@ z-index: -1;
   max-width: 400px;
 }
 
+/*viviendas*/
+.title-viviendas {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  padding: 10px;
+  font-size: 35px;
+  color: rgb(245, 243, 240);
+  font-weight: lighter;
+  font-style: italic;
+  text-shadow: 2px 1px 10px  #088da1;
+  z-index: 1;
+  position: relative;
+  animation: fadeIn 3s ease-in-out;
+}
+.description-vivienda {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  padding: 10px;
+  font-size: 18px;
+  color: rgb(245, 243, 240);
+  font-weight: lighter;
+  font-style: italic;
+  text-shadow: 2px 1px 10px #021c20;
+  position: relative;
+  text-decoration: none!important;
+}
+.vivienda-link {
+  text-decoration: none; 
+  color: inherit;
+}
+.viviendas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.vivienda-card {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+}
+.vivienda-image {
+  width: 100%;
+}
+.whish-button-green {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  margin: 12px 15px;
+  color: #074d57;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50px;
+  background-color:  #a5a2a7;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.vivienda-card:hover {
+  box-shadow: 0 2px 10px  rgba(0, 0, 0, 0.5);
+}
+
+.vivienda-card:hover .whish-button-green {
+  display: flex;
+}
+
+.whish-button-green {
+  color: grey;
+}
+
+.whish-button-green.active {
+  color: red;
+}
+/*small*/
+@media (max-width: 768px) {
+  .whish-button-green {
+    position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  margin: 10px 10px;
+  color: #074d57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 60px;
+  background-color:  #a5a2a7;
+  font-size: 1.1rem;
+  }
+  .vivienda-card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .vivienda-image {
+    width: 80%;
+  }
+}
+/*big*/
+@media (min-width: 1024px) {
+  .title-viviendas {
+    padding: 20px;
+    font-size: 50px;
+  }
+  .viviendas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 10px;
+  }
+  .vivienda-image {
+    width: 60vh;
+    height: auto;
+  }
+  .vivienda-card {
+    width: 100%;
+    max-width: 500px;
+  }
+  .description-vivienda {
+    padding: 20px;
+    font-size: 25px;
+  }
+}

@@ -9,7 +9,6 @@ import AdminProfile from "./Pages/AdminProfile";
 import ViviendasDetails from "./Pages/ViviendasDetails";
 import ErrorPage from"./Pages/ErrorPage"
 import UserProfile from "./Pages/UserProfile";
-import { DataWrapper } from "./context/Data.context.jsx";
 import NavBar from "./components/NavBar"
 import Footer from "./components/footer/Footer";
 import PrivateRoute from "./components/PrivateRoute"
@@ -17,7 +16,6 @@ import PrivateRoute from "./components/PrivateRoute"
 function App() {
   return (
     <div className="container-app">
-      <DataWrapper>
         <NavBar/>
         <Routes>
           <Route path={"/"} element={<Home />} />
@@ -31,7 +29,6 @@ function App() {
           <Route path={"/500"} element={<ErrorPage/>} />
         </Routes>
         <Footer/>
-      </DataWrapper>
     </div>
   );
 }

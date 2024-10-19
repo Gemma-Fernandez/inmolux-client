@@ -1,0 +1,26 @@
+.whish-button {
+    background: none;
+    color: rgb(245, 243, 240);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 40px;
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+.whish-state {
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    color: aliceblue;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

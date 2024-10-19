@@ -12,10 +12,12 @@ function UserProfile() {
   const {user} = useContext(AuthContext)
   const [userData, setUserData] = useState(null)
   const [error, setError] = useState("");
-
   const [newEmail, setNewEmail] = useState("");
   const [isEditing, setIsEditing] = useState(false);
+  const [isEditingUsername, setIsEditingUsername] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [newUserName, setNewUserName] = useState("") 
+
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -27,6 +29,8 @@ function UserProfile() {
         });
         console.log(response.data.user)
         setUserData(response.data.user); 
+        setNewEmail(response.data.user.email || "")
+        setNewUserName(response.data.user.username || "")
       } catch (err) {
         console.error(err);
         setError("Error al buscar los datos del usuario");
@@ -52,7 +56,7 @@ function UserProfile() {
   const handleEmailEdit = async () => {
     try {
       const response = await service.patch(
-        "/user/profile",
+        "/user/profile/email",
         { email: newEmail },
         {
           headers: {
@@ -60,6 +64,7 @@ function UserProfile() {
           },
         }
       );
+
       setUserData((prevUserData) => ({
         ...prevUserData,
         email: response.data.user.email,
@@ -72,14 +77,64 @@ function UserProfile() {
     }
   };
 
+  //--------Username---------
+  const handleUserNameChange = (e) => {
+    setNewUserName(e.target.value);
+  };
+
+  const handleUserNameEdit = async () => {
+    try {
+      const response = await service.patch(
+        "/user/profile/username",
+        { username: newUserName },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+          },
+        }
+      );
+
+      setUserData((prevUserData) => ({
+        ...prevUserData,
+        username: response.data.user.username,
+      }));
+
+      setIsEditingUsername(false)
+      setErrorMessage("")
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("Error al actualizar el email");
+    }
+  };
+
   return (
     <div>
-      <h1>User Profile:</h1>
+      <h1>User profile:</h1>
       <div>
-      <p>Name: {userData.username}</p>
-      <img src={userData.profile_image} style={{width: '200px',  heigth:'auto', borderRadius: '50%'}} alt="Profile" />
-      <p>Email: {userData.email}</p>
-      {isEditing ? (
+        <h2>{userData.username}</h2>
+        <>
+        {isEditingUsername ? (
+          <div>
+            <input type="text" value={newUserName} onChange={handleUserNameChange} />
+            <button onClick={handleUserNameEdit}>Send</button>
+            <button onClick={() => setIsEditingUsername(false)}>Cancelar</button>
+          </div>
+        ) : (
+          <button onClick={() => {
+            setNewUserName(userData.newUserName);
+            setIsEditingUsername(true);
+          }}>Editar Username</button>
+        )}
+        {errorMessage && <p>{errorMessage}</p>}
+      </>
+        <br/>
+        <img
+          src={userData.profile_image}
+          style={{ width: "200px", borderRadius: "50%" }}
+          alt="Profile"
+        />
+        <p>Email: {userData.email}</p>
+        {isEditing ? (
           <div>
             <input type="email" value={newEmail} onChange={handleEmailChange} />
             <button onClick={handleEmailEdit}>Send</button>
@@ -87,10 +142,10 @@ function UserProfile() {
           </div>
         ) : (
           <button onClick={() => setIsEditing(true)}>Editar e-mail</button>
-        )} {errorMessage && <p>{errorMessage}</p>}
+        )}
+        {errorMessage && <p>{errorMessage}</p>}
+      </div>
       <p>Role: {userData.role}</p>
-    </div>
-    
     </div>
   )
 }

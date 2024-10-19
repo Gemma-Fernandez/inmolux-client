@@ -26,8 +26,8 @@ function AdminProfile() {
         });
         console.log(response.data.user);
         setUserData(response.data.user);
-        setNewEmail(response.data.user.email); 
-        setNewUserName(response.data.user.username)
+        setNewEmail(response.data.user.email || "")
+        setNewUserName(response.data.user.username || "")
       } catch (err) {
         console.error(err);
         setError("Error al buscar los datos del usuario");
@@ -52,7 +52,7 @@ function AdminProfile() {
   const handleEmailEdit = async () => {
     try {
       const response = await service.patch(
-        "/user/profile",
+        "/user/profile/email",
         { email: newEmail },
         {
           headers: {
@@ -81,7 +81,7 @@ function AdminProfile() {
   const handleUserNameEdit = async () => {
     try {
       const response = await service.patch(
-        "/user/profile",
+        "/user/profile/username",
         { username: newUserName },
         {
           headers: {
