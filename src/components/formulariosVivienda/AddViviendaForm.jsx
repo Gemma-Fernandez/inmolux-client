@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import service from "../../services/config.js";
 import "./Formularios.css"
+import axios from "axios"
+
 
 
 
@@ -21,8 +23,30 @@ function AddViviendaForm() {
   const [property_type, setProperty_type] = useState("");
   const [bathrooms, setBathrooms] = useState("");
   const [bedrooms, setBedrooms] = useState("");
-  const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
+  
+  const [imageUrl, setImageUrl] = useState(null); //cloudinary
+  const [isUploading, setIsUploading] = useState(false);
+
+
+  const handleFileUpload = async (event) => {
+    if (!event.target.files[0]) {
+      return;
+    }
+    setIsUploading(true);
+  
+    const uploadData = new FormData(); 
+    uploadData.append("image", event.target.files[0]);
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/upload`, uploadData)
+  
+      setImageUrl(response.data.imageUrl);
+      
+      setIsUploading(false);
+    } catch (error) {
+      navigate("/500")
+    }
+  }
 
  const handleSubmit= async (event)=>{
     event.preventDefault();
@@ -34,7 +58,7 @@ function AddViviendaForm() {
         property_type,
         bathrooms,
         bedrooms,
-        image,
+        image: imageUrl,
         price
     }
     try {
@@ -62,14 +86,6 @@ function AddViviendaForm() {
           value={name}
           onChange={(event)=> setName(event.target.value)}
           placeholder="name"
-        />
-        <br />
-        <input
-          type="text"
-          name="image"
-          value={image}
-          onChange={(event)=> setImage(event.target.value)}
-          placeholder="image"
         />
         <br />
         <input
@@ -120,6 +136,15 @@ function AddViviendaForm() {
           onChange={(event)=> setPrice(event.target.value)}
           placeholder="Price"
         />
+        <br />
+        <input
+          type="file"
+          name="image"
+          onChange={handleFileUpload}
+          disabled={isUploading}
+        />
+        {imageUrl ? (<div><img src={imageUrl} alt="img" width={200} /></div>) : null}
+        {isUploading ? <h3>... uploading image</h3> : null}
         <br />
         <button className="buttonAdd" onClick={handleSubmit} type="submit">Save change</button>
       </form>
