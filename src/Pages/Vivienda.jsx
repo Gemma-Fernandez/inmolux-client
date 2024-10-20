@@ -42,8 +42,8 @@ const inList = (viviendasId) => {
               <p className="description-price">{eachElemnt.price} €</p>
               <button type='button' 
               className='whish-button-green '
-              onClick={(e) => {e.stopPropagation(); 
-                inList(eachElemnt._id) ? removeWish(eachElemnt._id) : addWish(eachElemnt._id)}}>
+              onClick={() => 
+                inList(eachElemnt._id) ? removeWish(eachElemnt._id) : addWish(eachElemnt._id)}>
                 <FaHeart style={{ color: inList(eachElemnt._id) ? '#074d57' : 'gray' }} />
               </button>
             

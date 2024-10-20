@@ -24,11 +24,11 @@ function App() {
           <Route path={"/login"} element={<Login />} />
           <Route path={"/signup"} element={<Signup />} />
           <Route path={"/vivienda"} element={<Vivienda />} />
-          <Route path={"/user/:profile"} element={<UserProfile />} />
-          <Route path={"/user/wishlist"} element={<ShowWishlist />} />
+          <Route path={"/user/:profile"} element={<PrivateRoute> <UserProfile /></PrivateRoute>} />
+          <Route path={"/user/wishlist"} element={<PrivateRoute><ShowWishlist /></PrivateRoute>} />
           <Route path={"/vivienda/:viviendasId"} element={<PrivateRoute> <ViviendasDetails /> </PrivateRoute>}/>
           <Route path={"vivienda/:viviendasId/edit"} element={<PrivateRoute> <EditForm/> </PrivateRoute>}/>
-          <Route path={"/admin/profile"} element={<AdminProfile />} />
+          <Route path={"/admin/profile"} element={<PrivateRoute><AdminProfile /></PrivateRoute>} />
           <Route path={"*"} element={<NotFound />} />
           <Route path={"/500"} element={<ErrorPage/>} />
         </Routes>

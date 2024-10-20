@@ -8,10 +8,12 @@ function Wishlist() {
   const { wishlist } = useContext(WishlistContext);
 
   return (
+    <div className='heart-icon'>
     <button type='button' className='whish-button'>
 <FaHeart />
 <span className='whish-state'>{wishlist.length}</span>
     </button>
+    </div>
   )
 }
 

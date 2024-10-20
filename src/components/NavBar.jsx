@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
-import { spread } from "axios";
 import logo1 from "../images/logo2.png";
 import { FaUser } from "react-icons/fa";
 import { FaUserPlus } from "react-icons/fa";
@@ -10,6 +9,7 @@ import { IoMdLogOut } from "react-icons/io";
 import { FaUserEdit } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Wishlist from "./Wishlist/Wishlist.jsx";
+import { GrSearchAdvanced } from "react-icons/gr";
 
 
 import React from "react";
@@ -35,9 +35,9 @@ function NavBar() {
     <div className="navbar-container">
 
       <Link to="/">
-        <img src={logo1} alt="logo" style={{ width: "150px" }} />
+        <img src={logo1} className="logo1" alt="logo" />
       </Link>
-      <div className="navbar-container-icons" title="Login">
+      <div className="navbar-container-icons">
         <Link to="/vivienda">
           <TiHome className="icon-vivienda" title="Listado de casas" />
         </Link>
@@ -60,10 +60,16 @@ function NavBar() {
                 title="Logout"
               />
             </Link>
-            
+
             <Link>
-            <Wishlist />
+            <GrSearchAdvanced className="icon-vivienda"/>
             </Link>
+            
+            <Link to="/user/wishlist">
+            <Wishlist title='wishlist'/>
+            </Link>
+
+           
           </>
         ) : (
           <>
@@ -72,6 +78,9 @@ function NavBar() {
             </Link>
             <Link to="/signup">
               <FaUserPlus className="icons-navbar" title="Signup" />
+            </Link>
+            <Link>
+            <GrSearchAdvanced className="icons-navbar"/>
             </Link>
           </>
         )}

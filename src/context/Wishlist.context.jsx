@@ -19,6 +19,7 @@ function WishlistWrapper({ children }) {
 
             const response = await service.get("/user/profile")
             setWishlist(response.data.user.wishlist)
+            console.log(response.data)
         } catch (error) {
             console.log(error)
         }
@@ -63,7 +64,7 @@ function WishlistWrapper({ children }) {
 
     
     return (
-        <WishlistContext.Provider value={{wishlist, addWish, removeWish}}>
+        <WishlistContext.Provider value={{wishlist, addWish, removeWish, getWishlist, setWishlist}}>
             {children}
         </WishlistContext.Provider>
     )
