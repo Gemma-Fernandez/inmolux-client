@@ -41,7 +41,9 @@ function ViviendasDetails() {
       {viviendaToShow ? (
         <>
           <h1>{viviendaToShow.name}</h1>
-          <img src={viviendaToShow.image} style={{ width: "200px" }} />
+          <img src={viviendaToShow.image1} style={{ width: "200px" }} />
+          <img src={viviendaToShow.image2} style={{ width: "200px" }} />
+          <img src={viviendaToShow.image3} style={{ width: "200px" }} />
           <p>{viviendaToShow.city}</p>
           <p>{viviendaToShow.description}</p>
           <p>Type: {viviendaToShow.property_type}</p>

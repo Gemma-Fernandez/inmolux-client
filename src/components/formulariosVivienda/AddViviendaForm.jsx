@@ -66,11 +66,9 @@ function AddViviendaForm() {
         property_type,
         bathrooms,
         bedrooms,
-<<<<<<< HEAD
-        image: imageUrl,
-=======
-        image,
->>>>>>> 1e320dc (formularios)
+        image1: imageUrl,
+        image2: imageUrl,
+        image3: imageUrl,
         price
     }
     try {
@@ -160,10 +158,9 @@ function AddViviendaForm() {
           placeholder="Price"
         />
         <br />
-<<<<<<< HEAD
         <input
           type="file"
-          name="image"
+          name="image3"
           onChange={handleFileUpload}
           disabled={isUploading}
         />
