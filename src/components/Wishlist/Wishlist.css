@@ -7,6 +7,7 @@
     border: none;
     padding: 0;
     position: relative;
+    margin-right: 10px;
 }
 
 .whish-state {
@@ -23,4 +24,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .whish-button {
+        margin-right: 10px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    
+    .whish-button {
+        background: none;
+        color: rgb(245, 243, 240);
+        font-size: 2rem;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        margin-right: 40px;
+        margin-top: 19vh;
+    }
+    
+    .whish-state {
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        color: aliceblue;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
