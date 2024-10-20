@@ -35,6 +35,7 @@ function App() {
           <Route path={"/vivienda/addVivienda"} element={<PrivateRoute><AddViviendaForm/></PrivateRoute>}/>
           <Route path={"/admin/profile"} element={<AdminProfile />} />
  master
+          <Route path={"/admin/profile"} element={<PrivateRoute><AdminProfile /></PrivateRoute>} />
           <Route path={"*"} element={<NotFound />} />
           <Route path={"/500"} element={<ErrorPage/>} />
         </Routes>
