@@ -1,10 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
 import service from "../../services/config.js";
+import "./Formularios.css"
+
 
 
 
@@ -68,8 +69,9 @@ function EditForm() {
 
   return (
     <div>
-      <h2>Edit vivienda</h2>
-      <form onSubmit={handleSubmit}>
+      <div className="title-contain"><h2 className="form-title-add">Edit vivienda</h2></div>
+      <form onSubmit={handleSubmit} className='form-editvivienda'>
+      <label>Name:</label>
         <input
           type="text"
           name="text"
@@ -78,6 +80,7 @@ function EditForm() {
           placeholder="name"
         />
         <br />
+        <label>Image:</label>
         <input
           type="text"
           name="image"
@@ -86,6 +89,7 @@ function EditForm() {
           placeholder="image"
         />
         <br />
+        <label>City:</label>
         <input
           type="text"
           name="city"
@@ -94,7 +98,9 @@ function EditForm() {
           placeholder="city"
         />
         <br />
+        <label>Description:</label>
         <input
+          as="textarea"
           type="text"
           name="description"
           value={description}
@@ -102,6 +108,7 @@ function EditForm() {
           placeholder="description"
         />
         <br />
+        <label>Property type:</label>
         <input
           type="text"
           name="property_type"
@@ -110,6 +117,7 @@ function EditForm() {
           placeholder="Porperty type"
         />
         <br />
+        <label>Bathrooms:</label>
         <input
           type="text"
           name="Bathrooms"
@@ -118,6 +126,7 @@ function EditForm() {
           placeholder="Bathrooms"
         />
         <br />
+        <label>Bedrooms:</label>
         <input
           type="text"
           name="bedrooms"
@@ -126,6 +135,7 @@ function EditForm() {
           placeholder="bedrooms"
         />
         <br />
+        <label>Price:</label>
         <input
           type="number"
           name="price"
