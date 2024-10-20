@@ -58,7 +58,9 @@ function AddViviendaForm() {
         property_type,
         bathrooms,
         bedrooms,
-        image: imageUrl,
+        image1: imageUrl,
+        image2: imageUrl,
+        image3: imageUrl,
         price
     }
     try {
@@ -139,7 +141,19 @@ function AddViviendaForm() {
         <br />
         <input
           type="file"
-          name="image"
+          name="image1"
+          onChange={handleFileUpload}
+          disabled={isUploading}
+        />
+        <input
+          type="file"
+          name="image2"
+          onChange={handleFileUpload}
+          disabled={isUploading}
+        />
+        <input
+          type="file"
+          name="image3"
           onChange={handleFileUpload}
           disabled={isUploading}
         />
