@@ -48,7 +48,7 @@ const inList = (viviendasId) => {
               </button>
             
           </div>
-        );
+        )
       })}
     </div>
     </>
