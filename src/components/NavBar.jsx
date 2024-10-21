@@ -61,8 +61,8 @@ function NavBar() {
               />
             </Link>
 
-            <Link>
-            <GrSearchAdvanced className="icon-vivienda"/>
+            <Link to="/vivienda/search" className="search-mobile">
+            <GrSearchAdvanced className="icons-navbar" title="Search"/>
             </Link>
             
             <Link to="/user/wishlist">
@@ -79,8 +79,8 @@ function NavBar() {
             <Link to="/signup">
               <FaUserPlus className="icons-navbar" title="Signup" />
             </Link>
-            <Link>
-            <GrSearchAdvanced className="icons-navbar"/>
+            <Link to="/vivienda/search" className="search-mobile">
+            <GrSearchAdvanced className="icons-navbar" title="Search"/>
             </Link>
           </>
         )}
