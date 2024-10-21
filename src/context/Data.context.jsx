@@ -4,7 +4,8 @@ import axios from "axios";
 const DataContext = createContext();
 
 function DataWrapper({ children }) {
-  const [allData, setAllData] = useState([]);
+  const [allData, setAllData] = useState([])
+  const [filteredData, setFilteredData] = useState([])
  
   useEffect(() => {
     getData();
@@ -25,7 +26,7 @@ function DataWrapper({ children }) {
   
 
   return (
-    <DataContext.Provider value={{ allData, setAllData}}>
+    <DataContext.Provider value={{ allData, setAllData, getData, filteredData, setFilteredData}}>
       {children}
     </DataContext.Provider>
   );
