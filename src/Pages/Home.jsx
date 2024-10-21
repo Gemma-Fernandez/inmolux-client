@@ -1,19 +1,15 @@
-import React from 'react'
-import video from "../images/video.mp4"
+import React from "react";
+import Video from "../components/Video"
 
 function Home() {
-
-
   return (
-    <div className="background-video-container">
-      <video autoPlay loop muted playsIncline className="background-video">
-        <source src={video} type="video/mp4" />
-       </video> 
-       <div className="content">
-        <h2>Welcome to InmoLux</h2>
-       </div>
-    </div>
-  )
+    <>
+      <h2 className="content">Welcome to InmoLux</h2>
+      <Video/>
+    </>
+  );
 }
 
-export default Home
+export default Home;
+
+

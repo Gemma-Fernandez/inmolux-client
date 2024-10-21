@@ -166,8 +166,8 @@ function AdminProfile() {
       <h2>User Request</h2>
       {solicitudes.map((eachElement, i)=>(
         <li key={i}>
-          <h3>Apartment: {eachElement.vivienda[0].name} - {eachElement.vivienda[0].city} </h3> {/* falta name y city*/}
-          <p>User: {eachElement.user[0].username} - {eachElement.user[0].email}</p>    {/* falta username y email*/}
+          <h3>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city} </h3> {/* falta name y city*/}
+          <p>User: {eachElement.user.username} - {eachElement.user.email}</p>    {/* falta username y email*/}
           <p>Message: {eachElement.message}</p>
         </li>
       )

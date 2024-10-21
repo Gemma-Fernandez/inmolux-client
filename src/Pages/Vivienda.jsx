@@ -8,6 +8,7 @@ import { WishlistContext } from "../context/Wishlist.context.jsx";
 import Search from "./Search.jsx";
 import { DataContext } from "../context/Data.context.jsx"
 
+
 function Vivienda() {
   const { addWish, removeWish, wishlist } = useContext(WishlistContext);
   const { allData, filteredData, setFilteredData } = useContext(DataContext)
@@ -56,7 +57,7 @@ function Vivienda() {
           dataToDisplay.map((eachElemnt) => (
             <div key={eachElemnt._id} className='vivienda-card'>
               <Link to={`/vivienda/${eachElemnt._id} `} className="vivienda-link">
-                <img src={eachElemnt.image} className="vivienda-image" />
+                <img src={eachElemnt.image1} className="vivienda-image" />
                 <h3 className="description-vivienda">{eachElemnt.name}</h3>
               </Link>
               <p className="description-price">{eachElemnt.price} €</p>

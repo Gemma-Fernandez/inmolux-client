@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { DataWrapper } from "./context/Data.context.jsx";
 import { AuthWrapper } from "./context/auth.context"
 import { WishlistWrapper } from "./context/Wishlist.context.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from "./App.jsx";
 import "./index.css";
 
