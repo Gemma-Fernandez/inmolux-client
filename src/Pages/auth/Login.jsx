@@ -30,17 +30,12 @@ function Login() {
       
 
       localStorage.setItem("authToken", response.data.authToken);
-//console.log(response.data.authToken)
+
       await authenticateUser();
 
-    /*console.log(response.data.user)
-      if (user.role === "admin") {
-        const adminId = user._id; 
-        setAdmin(true);
-        navigate(`/admin/${adminId}`);
-      } else {*/
+    
         navigate(`/vivienda`);
-      /*}*/
+      
      
     } catch (error) {
       console.log(error);
@@ -79,7 +74,7 @@ function Login() {
 
         {errorMessage && <p>{errorMessage}</p>}
 
-        <p>Haven't you sign up yet?</p>
+        <p>No account?</p>
         <a href="/signup">Sign up here!</a>
       </form>
     </div>

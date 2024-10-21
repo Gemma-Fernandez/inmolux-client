@@ -29,12 +29,11 @@ function App() {
           <Route path={"/user/wishlist"} element={<PrivateRoute><ShowWishlist /></PrivateRoute>} />
           <Route path={"/vivienda/:viviendasId"} element={<PrivateRoute> <ViviendasDetails /> </PrivateRoute>}/>
           <Route path={"vivienda/:viviendasId/edit"} element={<PrivateRoute> <EditForm/> </PrivateRoute>}/>
- malu
-          
+         
 
           <Route path={"/vivienda/addVivienda"} element={<PrivateRoute><AddViviendaForm/></PrivateRoute>}/>
-          <Route path={"/admin/profile"} element={<AdminProfile />} />
- master
+          <Route path={"/admin/profile"} element={<PrivateRoute><AdminProfile /></PrivateRoute>} />
+
           <Route path={"*"} element={<NotFound />} />
           <Route path={"/500"} element={<ErrorPage/>} />
         </Routes>

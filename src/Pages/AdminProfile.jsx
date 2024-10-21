@@ -15,6 +15,7 @@ function AdminProfile() {
   const [isEditingUsername, setIsEditingUsername] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [newUserName, setNewUserName] = useState("")
+  const [solicitudes, setSolicitudes]=useState([])
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -24,7 +25,7 @@ function AdminProfile() {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
-        console.log(response.data.user);
+        
         setUserData(response.data.user);
         setNewEmail(response.data.user.email || "")
         setNewUserName(response.data.user.username || "")
@@ -33,8 +34,22 @@ function AdminProfile() {
         setError("Error al buscar los datos del usuario");
       }
     };
+    const fetchSolicitudes= async()=>{
+      try {
+        const response=await service.get("/solicitud", {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+          }
+        })
+        console.log(response.data)
+        setSolicitudes(response.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
 
     fetchUserData();
+    fetchSolicitudes();
   }, []);
 
   if (error) {
@@ -107,7 +122,7 @@ function AdminProfile() {
     <div>
       <h1>Admin profile:</h1>
       <div>
-        <h2>{userData.username}</h2>
+        <h2>Welcome, {userData.username}</h2>
         <>
         {isEditingUsername ? (
           <div>
@@ -146,6 +161,17 @@ function AdminProfile() {
         <Link to={"/vivienda/addVivienda"}>
         <button>Add new apartment</button>
         </Link>
+      </div>
+      <div>
+      <h2>User Request</h2>
+      {solicitudes.map((eachElement, i)=>(
+        <li key={i}>
+          <h3>Apartment: {eachElement.vivienda[0].name} - {eachElement.vivienda[0].city} </h3> {/* falta name y city*/}
+          <p>User: {eachElement.user[0].username} - {eachElement.user[0].email}</p>    {/* falta username y email*/}
+          <p>Message: {eachElement.message}</p>
+        </li>
+      )
+      )}
       </div>
     </div>
   );

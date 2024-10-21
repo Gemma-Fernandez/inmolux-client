@@ -7,7 +7,7 @@ const service= axios.create({
 service.interceptors.request.use((config)=>{
     const storedToken= localStorage.getItem("authToken")
     if(storedToken){
-        config.headers.authorization= `Bearer ${storedToken}`
+        config.headers.Authorization= `Bearer ${storedToken}`
     }
     return config
 

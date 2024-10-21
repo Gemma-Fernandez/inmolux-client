@@ -4,7 +4,7 @@ import service from "../services/config.js";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa6";
-import { WishlistContext } from "../context/Wishlist.context.jsx";
+import { WishlistContext } from "../context/Wishlist.context";
 
 function Vivienda() {
   const { addWish, removeWish, wishlist } = useContext(WishlistContext);

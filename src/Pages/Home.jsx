@@ -10,7 +10,7 @@ function Home() {
         <source src={video} type="video/mp4" />
        </video> 
        <div className="content">
-        <h2>Welcome InmoLux</h2>
+        <h2>Welcome to InmoLux</h2>
        </div>
     </div>
   )
