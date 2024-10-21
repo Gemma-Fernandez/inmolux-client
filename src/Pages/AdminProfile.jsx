@@ -1,13 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../context/auth.context";
-import { useNavigate } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 import service from "../services/config";
+import { DataContext } from "../context/Data.context";
+
 
 function AdminProfile() {
-  const { admin } = useContext(AuthContext);
+const {removeSolicitud, solicitudes, setSolicitudes} = useContext(DataContext)
+  
+  
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState("");
   const [newEmail, setNewEmail] = useState("");
@@ -15,7 +18,9 @@ function AdminProfile() {
   const [isEditingUsername, setIsEditingUsername] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [newUserName, setNewUserName] = useState("")
-  const [solicitudes, setSolicitudes]=useState([])
+ 
+  
+  
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -41,7 +46,7 @@ function AdminProfile() {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           }
         })
-        console.log(response.data)
+        
         setSolicitudes(response.data)
       } catch (error) {
         console.log(error)
@@ -118,6 +123,11 @@ function AdminProfile() {
     }
   };
 
+  
+
+
+  
+
   return (
     <div>
       <h1>Admin profile:</h1>
@@ -169,6 +179,7 @@ function AdminProfile() {
           <h3>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city} </h3> {/* falta name y city*/}
           <p>User: {eachElement.user.username} - {eachElement.user.email}</p>    {/* falta username y email*/}
           <p>Message: {eachElement.message}</p>
+          <button onClick={() => removeSolicitud(eachElement._id)}>Delete</button>
         </li>
       )
       )}

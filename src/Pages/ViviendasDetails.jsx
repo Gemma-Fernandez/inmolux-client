@@ -75,9 +75,9 @@ function ViviendasDetails() {
         <>
           <h1>{viviendaToShow.name}</h1>
           <Carousel  fade>
-          <Carousel.Item> <img src={viviendaToShow.image1} style={{ width: "200px" }} />  </Carousel.Item>
-          <Carousel.Item><img src={viviendaToShow.image2} style={{ width: "200px" }} /></Carousel.Item>
-          <Carousel.Item> <img src={viviendaToShow.image3} style={{ width: "200px" }} /></Carousel.Item>
+          <Carousel.Item> <img src={viviendaToShow.image1} style={{ width: "300px" }} />  </Carousel.Item>
+          <Carousel.Item><img src={viviendaToShow.image2} style={{ width: "300px" }} /></Carousel.Item>
+          <Carousel.Item> <img src={viviendaToShow.image3} style={{ width: "300px" }} /></Carousel.Item>
           </Carousel>
           <p>{viviendaToShow.city}</p>
           <p>{viviendaToShow.description}</p>
@@ -96,7 +96,7 @@ function ViviendasDetails() {
       ) : (
         <p>Loading...</p>
       )}
-      {user? (
+      {!admin? (
         <form onSubmit={handleSubmit}> 
         <h3>Are you interested in? Send a request for this property</h3>
             <textarea

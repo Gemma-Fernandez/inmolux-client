@@ -60,6 +60,7 @@ function Vivienda() {
                 <img src={eachElemnt.image1} className="vivienda-image" />
                 <h3 className="description-vivienda">{eachElemnt.name}</h3>
               </Link>
+              <p className="description-vivienda">{eachElemnt.city}</p>
               <p className="description-price">{eachElemnt.price} €</p>
               <button type='button'
                 className='whish-button-green '

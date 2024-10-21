@@ -4,12 +4,12 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { useState, useEffect } from "react";
 import service from "../services/config";
-
+import { DataContext } from "../context/Data.context";
 
 
 function UserProfile() {
-
-  const {user} = useContext(AuthContext)
+  const {solicitudes, setSolicitudes, showSoli, setShowSoli, showSolicitudes} = useContext(DataContext)
+  const {user } = useContext(AuthContext)
   const [userData, setUserData] = useState(null)
   const [error, setError] = useState("");
   const [newEmail, setNewEmail] = useState("");
@@ -17,6 +17,11 @@ function UserProfile() {
   const [isEditingUsername, setIsEditingUsername] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [newUserName, setNewUserName] = useState("") 
+ 
+  //const {userId}= useParams()
+
+ 
+  
 
 
   useEffect(() => {
@@ -27,7 +32,7 @@ function UserProfile() {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`, 
           },
         });
-        console.log(response.data.user)
+        
         setUserData(response.data.user); 
         setNewEmail(response.data.user.email || "")
         setNewUserName(response.data.user.username || "")
@@ -36,10 +41,17 @@ function UserProfile() {
         setError("Error al buscar los datos del usuario");
       }
     };
+console.log(user)
+fetchUserData()
+if(user){
+  
+  showSolicitudes()
 
-    fetchUserData();
-  }, []);
+}
+}, [user]);
 
+
+  
   if (error) {
     return <div>{error}</div>;
   }
@@ -107,6 +119,10 @@ function UserProfile() {
     }
   };
 
+  
+
+  
+
   return (
     <div className='profile-container'>
       <div className='profile-image'>
@@ -152,8 +168,20 @@ function UserProfile() {
         {errorMessage && <p>{errorMessage}</p>}
         </div>
       </div>
+      
+      <h2>My Request</h2>
+      {showSoli.map((eachElement, i)=>(
+        <li key={i}>
+          <h3>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city} </h3> {/* falta name y city*/}
+          <p>Message: {eachElement.message}</p>
+          
+        </li>
+      )
+      )}
       </div>
   )
 }
 
 export default UserProfile
+
+//<button onClick={() => removeSolicitud(eachElement._id)}>Delete</button>

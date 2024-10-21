@@ -7,6 +7,7 @@ const WishlistContext = createContext()
 function WishlistWrapper({ children }) {
     const { user } = useContext(AuthContext)
     const [wishlist, setWishlist] = useState([])
+    
 
     useEffect(() => {
         if (user) {
@@ -19,7 +20,7 @@ function WishlistWrapper({ children }) {
 
             const response = await service.get("/user/profile")
             setWishlist(response.data.user.wishlist)
-            console.log(response.data)
+            
         } catch (error) {
             console.log(error)
         }
@@ -62,7 +63,7 @@ function WishlistWrapper({ children }) {
             }
         }
 
-    
+        
     return (
         <WishlistContext.Provider value={{wishlist, addWish, removeWish, getWishlist, setWishlist}}>
             {children}

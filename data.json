@@ -1,122 +1,80 @@
 
 [
   {
-   
-  "name": "Marzo Best Offer LM7",
-  "city": "Madrid",
-  "description": "Located on a wonderful street in one of the most elegant areas of the city, near Plaza de la Cibeles, one of the most important monuments in Madrid, and steps from Puerta del Sol, Plaza Mayor, Gran Vía, and Retreat Newly installed Air Conditioning Perfect location to discover all the cultural offerings that Madrid offers (Prado Museum, Thyssen-Bornemisza Museum, Reina Sofía Museum, Royal Palace...) and stroll along the Gran Vía, and even see some of the fantastic shows of its theaters and cinemas. In addition, it is very close to the Retiro Park, the lung of the capital, where you can spend a pleasant time enjoying its terraces, taking a boat ride around its pond, sunbathing, enjoying rollerblading or cycling. Apartment recently renovated and decorated by a prestigious interior design team, it has several comfortable rooms, a separate kitchen and bathrooms.",
-  "property_type": "house",
-  "bathrooms": "5",
-  "bedrooms": "5",
-  "image": "https://img.freepik.com/foto-gratis/habitacion-amplia-moderna-gran-ventanal_7502-7289.jpg?t=st=1729087626~exp=1729091226~hmac=44d225a7c7fef1ed973f30a581a70e8166bfd02017faf6b59a6ad9c0aaa695ac&w=996",
-  "price": 1500
- 
-},
-{
+    
+    "name": "Marzo Best Offer LM7",
+    "city": "Madrid",
+    "description": "Located on a wonderful street in one of the most elegant areas of the city, near Plaza de la Cibeles, one of the most important monuments in Madrid, and steps from Puerta del Sol, Plaza Mayor, Gran Vía, and Retreat Newly installed Air Conditioning Perfect location to discover all the cultural offerings that Madrid offers (Prado Museum, Thyssen-Bornemisza Museum, Reina Sofía Museum, Royal Palace...) and stroll along the Gran Vía, and even see some of the fantastic shows of its theaters and cinemas. In addition, it is very close to the Retiro Park, the lung of the capital, where you can spend a pleasant time enjoying its terraces, taking a boat ride around its pond, sunbathing, enjoying rollerblading or cycling. Apartment recently renovated and decorated by a prestigious interior design team, it has several comfortable rooms, a separate kitchen and bathrooms.",
+    "property_type": "Aparment",
+    "bathrooms": "5",
+    "bedrooms": "5",
+    "price": 10000,
+    "__v": 0,
+    "image1": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/583447571.jpg?k=04f7b03874b971a7358ce20ca7f6873e2236e5c3aa49af71f53ee6ec8bb9ab62&o=&hp=1",
+    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/579127797.jpg?k=9bf4c3836206f3eb143da019a72ab9f22f8f4fb9c68c013ceaa962a65ef70154&o=&hp=1",
+    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/537746404.jpg?k=b9309d409a355bf8bf20011161db5090a271b57a6fe7b334ae65e3b9bc154982&o=&hp=1"
+  },
+  {
+    
     "name": "Valencia Grand Suite",
     "city": "Valencia",
-    "description": "Exclusivo apartamento de lujo frente a la playa de la Malvarrosa, con vistas espectaculares al mar Mediterráneo. Cuenta con una amplia terraza, cocina equipada de alta gama y espacios de diseño vanguardista.",
-    "property_type": "apartment",
-    "bathrooms": "3",
-    "bedrooms": "3",
-    "image": "https://img.freepik.com/foto-gratis/apartamento-moderno-vistas-al-mar_23-2149359487.jpg",
-    "price": 3500
-    
-  },
-  {
-    
-    "name": "Barcelona Penthouse Deluxe",
-    "city": "Barcelona",
-    "description": "Ático de lujo en la zona más exclusiva de Paseo de Gracia. Ofrece vistas panorámicas a la Sagrada Familia y al mar. Decorado por un reconocido diseñador de interiores, es el lugar perfecto para disfrutar del lujo y la comodidad en Barcelona.",
-    "property_type": "apartment",
+    "description": "Exclusive luxury apartment in front of Malvarrosa beach, with spectacular views of the Mediterranean Sea. It has a large terrace, a high-end equipped kitchen and avant-garde design spaces.",
+    "property_type": "Aparment",
     "bathrooms": "4",
-    "bedrooms": "5",
-    "image": "https://img.freepik.com/foto-gratis/atico-lujoso-terraza-vistas-panoramicas_23-2148975550.jpg",
-    "price": 6000
-    
-  },
-  {
-    
-    "name": "Sevilla Luxury Retreat",
-    "city": "Sevilla",
-    "description": "Apartamento de lujo en un edificio histórico del centro de Sevilla, con acceso privado y una gran terraza con vistas a la Giralda. Dispone de interiores modernos y un diseño único que combina lo clásico con lo contemporáneo.",
-    "property_type": "apartment",
-    "bathrooms": "3",
-    "bedrooms": "3",
-    "image": "https://img.freepik.com/foto-gratis/terraza-privada-centro-ciudad-historica_23-2148856989.jpg",
-    "price": 4000
-    
-  },
-  {
-    
-    "name": "Málaga Sky Residence",
-    "city": "Málaga",
-    "description": "Este apartamento de lujo en la Torre del Puerto ofrece vistas inigualables a la costa malagueña y al mar. Cuenta con piscina privada, gimnasio y servicios exclusivos para residentes. El lugar ideal para disfrutar de la Costa del Sol.",
-    "property_type": "apartment",
-    "bathrooms": "3",
     "bedrooms": "4",
-    "image": "https://img.freepik.com/foto-gratis/apartamento-lujo-vista-panoramica-costa_23-2148998897.jpg",
-    "price": 4800
-    
+    "price": 1000,
+    "__v": 0,
+    "image1": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967230.jpg?k=41d3d321b7551523c4e5264697fecdcb4c9b7db320b0bc9e59640d8725bc2a54&o=&hp=1",
+    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967236.jpg?k=43858d6e01c29b886b513bf92312d47c6f20bef141f4a6474d7764160bde1f50&o=&hp=1",
+    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967291.jpg?k=8b9b9ed2df8caa39093368163fe508cc18dd9fb0e20d2e950b7680d0705069ad&o=&hp=1"
   },
   {
-    
-    "name": "Bilbao Modern Loft",
-    "city": "Bilbao",
-    "description": "Moderno loft de lujo en el corazón del Casco Viejo de Bilbao, con techos altos y ventanales que ofrecen vistas al Museo Guggenheim. Un espacio único para quienes valoran el arte y la exclusividad en una de las ciudades más vibrantes de España.",
-    "property_type": "apartment",
-    "bathrooms": "2",
-    "bedrooms": "2",
-    "image": "https://img.freepik.com/foto-gratis/loft-moderno-vistas-museo_23-2149210172.jpg",
-    "price": 3700
-    
-  },
-  {
-    
-    "name": "Ibiza Beachfront Escape",
-    "city": "Ibiza",
-    "description": "Increíble apartamento de lujo a pie de playa en Ibiza, con acceso directo al mar y una terraza privada para disfrutar de los atardeceres. Ideal para quienes buscan un refugio de lujo en una de las islas más exclusivas del Mediterráneo.",
-    "property_type": "apartment",
-    "bathrooms": "2",
-    "bedrooms": "3",
-    "image": "https://img.freepik.com/foto-gratis/apartamento-playa-lujo-terraza-vista-mar_23-2149098234.jpg",
-    "price": 5500
-    
-  },
-  {
-    
-    "name": "Granada Alhambra Views",
-    "city": "Granada",
-    "description": "Apartamento de lujo en el Albaicín con impresionantes vistas a la Alhambra y a Sierra Nevada. Una mezcla perfecta entre el estilo tradicional andaluz y las comodidades modernas. El lugar perfecto para vivir la magia de Granada.",
-    "property_type": "apartment",
-    "bathrooms": "3",
-    "bedrooms": "4",
-    "image": "https://img.freepik.com/foto-gratis/apartamento-vistas-alhambra-terraza_23-2148967534.jpg",
-    "price": 4200
-    
-  },
-  {
-   
-    "name": "Marbella Golden Mile",
+    "_id": {
+      "$oid": "670fe024da65ba1e2b485c92"
+    },
+    "name": "Villa Pescaito",
     "city": "Marbella",
-    "description": "Apartamento de lujo en la Milla de Oro de Marbella, a pocos minutos del puerto deportivo de Puerto Banús. Espacioso, con piscina comunitaria y un diseño interior de alto nivel. Ideal para disfrutar de la exclusividad de la Costa del Sol.",
-    "property_type": "apartment",
-    "bathrooms": "4",
-    "bedrooms": "5",
-    "image": "https://img.freepik.com/foto-gratis/apartamento-lujo-piscina-comunitaria_23-2148905437.jpg",
-    "price": 7500
-    
+    "description": "Located 1.7 km from Playa Nueva Andalucía, Villa Pescaito offers accommodation in Marbella with access to a hot tub. This holiday home also features a private pool and free WiFi. This air-conditioned house or chalet is made up of 6 separate bedrooms, a fully equipped kitchen and 4 bathrooms. TV is offered. Cortijo Blanco Beach is 2.2 km from the accommodation, and Praia do Rio Verde is 2.4 km.",
+    "property_type": "House",
+    "bathrooms": "5",
+    "bedrooms": "6",
+    "price": 17000,
+    "__v": 0,
+    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967311.jpg?k=adb9d8e5b989f230fcd8009a3e472fe1bd2ce2a57e2f4c68d2302bf1c36e5b7d&o=&hp=1",
+    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967238.jpg?k=686edc0469e4383cf26d7eb023c463e4de1281718920cd7292b47da262269dac&o=&hp=1",
+    "image1": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/586967227.jpg?k=58df70908a98b88efba1c57a413c215ff03d99d102a80e5f4ba6d599af03aca3&o="
   },
   {
-     "name": "San Sebastián Oceanview",
-    "city": "San Sebastián",
-    "description": "Lujoso apartamento con vistas a la Bahía de La Concha. Decoración moderna, con una gran terraza para disfrutar del paisaje y la brisa del Cantábrico. La opción perfecta para vivir en uno de los lugares más bellos del norte de España.",
-    "property_type": "apartment",
-    "bathrooms": "2",
-    "bedrooms": "3",
-    "image": "https://img.freepik.com/foto-gratis/apartamento-vista-oceanica-terraza_23-2149047392.jpg",
-    "price": 5200
-    
+    "_id": {
+      "$oid": "670fe079da65ba1e2b485c94"
+    },
+    "name": "Villa Casablanca",
+    "city": "Marbella",
+    "description": "Located 1.7 km from Playa Nueva Andalucía, Casablanca offers accommodation in Marbella with access to a hot tub. This holiday home also features a private pool and free WiFi. This air-conditioned house or chalet is made up of 6 separate bedrooms, a fully equipped kitchen and 4 bathrooms. TV is offered. Cortijo Blanco Beach is 2.2 km from the accommodation, and Praia do Rio Verde is 2.4 km.",
+    "property_type": "House",
+    "bathrooms": "7",
+    "bedrooms": "6",
+    "price": 18500,
+    "__v": 0,
+    "image1": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/294763105.jpg?k=32ab7bc1fa8a27d93798ee74acbb9b615168aa3228246aa1bdd78e01d16c03e1&o=&hp=1",
+    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/344334871.jpg?k=69cb38882627bab4662a4009591c0f2a8a82e062fca146ca76b37e379e47c0b6&o=&hp=1",
+    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/548089331.jpg?k=726986d60965aa5826988fe337c02627c5f8c61d13ee0a6f798ae024e243d516&o=&hp=1"
+  },
+  {
+    "_id": {
+      "$oid": "670fe0a8da65ba1e2b485c96"
+    },
+    "name": "Villa Barceloneta",
+    "city": "Barcelona",
+    "description": "Featuring city views, Barcelona Beach Home offers accommodation with a balcony and a kettle, about a 5-minute walk from Platja de Sant Miquel. This beachfront property offers free private parking, free WiFi and access to a terrace. This air-conditioned house or chalet consists of 6 bedrooms, a living room, a fully equipped kitchen with a refrigerator and a coffee machine, and 4 bathrooms with a bidet and a shower. There are towels and bed linen in the house or chalet. Popular points of interest near the accommodation include Platja de la Barceloneta, Platja de Sant Sebastià and Santa María del Mar.",
+    "property_type": "House",
+    "bathrooms": "6",
+    "bedrooms": "4",
+    "price": 20000,
+    "__v": 0,
+    "image1": "https://img.freepik.com/free-photo/beautiful-tropical-beach-front-hotel-resort-with-swimming-pool-paradise-destination-vacations-ge_1258-150769.jpg?t=st=1729093772~exp=1729097372~hmac=5b0e7c3d114434f25095869f0d93600c720580e70150cde2f808afb97178a40f&w=900",
+    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/374476526.jpg?k=5ae6d24015915d89f771bb2b3c679d7700df5d94f62e79bc1a2ed99582330623&o=&hp=1",
+    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/374476831.jpg?k=7af6cc0b2d147df8f3930128d8f648f0f2a850e5a9970cfc75bf9fcfa74aca66&o=&hp=1"
   }
 
 ]
