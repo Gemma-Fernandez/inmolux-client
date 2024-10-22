@@ -1,0 +1,31 @@
+.footer-container{
+    background-color:#197482 ;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;    /*abarca el ancho de la pag*/
+    padding-bottom:1px;
+    font-size: 17px;
+}
+.footer-elements{
+ display: flex;
+ justify-content: space-around;
+ padding: 20px;
+ 
+}
+ a{
+    color: white;
+    text-decoration: none,
+}
+a:hover{
+    transition: color 0.3s;
+}
+@media only screen and (max-width: 768px){
+    .footer-container{
+        font-size: 10px;
+    }
+    .footer-title{
+        font-size: 15px;
+    }
+}

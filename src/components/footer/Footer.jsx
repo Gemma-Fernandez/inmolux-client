@@ -1,28 +1,35 @@
-import React from 'react'
-import "./footer.css"
+import React from "react";
+import "./footer.css";
+import { MdOutlineEmail } from "react-icons/md";
+import { BiPhoneCall } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { FaHouseFlag } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <div>
-     {/* <div>
-        <h2>About</h2>
-        <p>Our Services</p>
-        <p>Our Story</p>
+    <div className="footer-container">
+      <div className="footer-elements">
+        <div>
+          <h4 className="footer-title">About</h4>
+          <a href=""><MdMiscellaneousServices /> Our Services</a> <br/>
+          <a href=""><FaHouseFlag /> Our Story</a>
+        </div>
+        <div>
+          <h4 className="footer-title">Develop by:</h4>
+          <a href="https://github.com/Malu888"> <FaGithub /> Malú Dietrich</a>
+          <br />
+          <a href="https://github.com/Gemma-Fernandez"> <FaGithub /> Gemma Fernandez</a>
+        </div>
+        <div>
+          <h4 className="footer-title">Contact us</h4>
+          <a href=""><MdOutlineEmail/> support@inmolux.com</a> <br/>
+          <a href=""><BiPhoneCall /> +34 688 999 898</a>
+        </div>
       </div>
-      <div>
-        <h2>Develop by:</h2>
-        <a href="">Malú D</a>
-        <br/>
-        <a href="">Gemma F</a>
-      </div>
-      <div>
-        <h2>Contact us</h2>
-        <p>support@inmolux.com</p>
-        <p>+34 688 999 898</p>
-      </div>
-      <p>© 2022 Copyright Inmo.Lux Inc.</p>*/}
+      <p>© 2024 Copyright Inmo.Lux Inc.</p>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
