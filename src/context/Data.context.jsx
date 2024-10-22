@@ -6,13 +6,16 @@ import service from "../services/config.js"
 const DataContext = createContext();
 
 function DataWrapper({ children }) {
-  const {user} = useContext(AuthContext)
+ const {user, authenticateUser, isLoggedIn} = useContext(AuthContext)
   const [allData, setAllData] = useState([])
   const [filteredData, setFilteredData] = useState([])
   const [solicitudes, setSolicitudes]=useState([])
   const [showSoli, setShowSoli] = useState([])
+
+
   useEffect(() => {
     getData();
+    authenticateUser()
     if(user) {
       showSolicitudes()
     }
@@ -54,19 +57,15 @@ function DataWrapper({ children }) {
   }
 
   
-    const showSolicitudes= async()=>{
-      try {
-        const userId= user? user._id:null;
-        console.log("user", userId)
-    
-        const response=await service.get(`/solicitud/${userId}`)
-        
-        setShowSoli(response.data)
-       
-      } catch (error) {
-        console.log(error)
-      }
+  const showSolicitudes = async () => {
+    try {
+      const response = await service.get("/solicitud/solicitudes")
+      setShowSoli(response.data); 
+    } catch (error) {
+      console.error("Error al recuperar solicitudes:", error);
+      setError("No se pueden cargar solicitudes."); 
     }
+  };
   
  
   

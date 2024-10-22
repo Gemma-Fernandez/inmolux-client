@@ -1,28 +1,25 @@
 import React from 'react'
-import { useParams, Link} from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { useState, useEffect } from "react";
 import service from "../services/config";
 import { DataContext } from "../context/Data.context";
+import { IoIosCloudDone } from "react-icons/io";
+
 
 
 function UserProfile() {
-  const {solicitudes, setSolicitudes, showSoli, setShowSoli, showSolicitudes} = useContext(DataContext)
+  const {showSoli, setShowSoli, showSolicitudes} = useContext(DataContext)
   const {user } = useContext(AuthContext)
   const [userData, setUserData] = useState(null)
   const [error, setError] = useState("");
   const [newEmail, setNewEmail] = useState("");
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(false)
   const [isEditingUsername, setIsEditingUsername] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("")
   const [newUserName, setNewUserName] = useState("") 
- 
-  //const {userId}= useParams()
-
- 
   
-
+ 
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -42,13 +39,17 @@ function UserProfile() {
       }
     };
 console.log(user)
+
+
 fetchUserData()
+
+
 if(user){
   
   showSolicitudes()
 
 }
-}, [user]);
+}, [user, setShowSoli]);
 
 
   
@@ -126,7 +127,7 @@ if(user){
   return (
     <div className='profile-container'>
       <div className='profile-image'>
-      <h1 className='profile-title'>{userData.username} profile</h1>
+      <h1 className='profile-title'>{userData.username} Profile</h1>
         <img
         className='image'
           src={userData.profile_image}
@@ -141,7 +142,7 @@ if(user){
         <>
         {isEditingUsername ? (
           <div className='profile-drop'>
-            <input type="text" value={newUserName} onChange={handleUserNameChange} />
+            <input type="text" value={newUserName} onChange={handleUserNameChange} className='input-profile-email-username'/>
             <button className='button-profile' onClick={handleUserNameEdit}>Enviar</button>
             <button className='button-cancelar' onClick={() => setIsEditingUsername(false)}>Cancelar</button>
           </div>
@@ -149,7 +150,7 @@ if(user){
           <button className='button-profile' onClick={() => {
             setNewUserName(userData.username);
             setIsEditingUsername(true);
-          }}>Editar Username</button>
+          }}>Edit your username</button>
         )}
         {errorMessage && <p>{errorMessage}</p>}
       </>
@@ -158,27 +159,30 @@ if(user){
       <p className='profile-email'>{userData.email}</p>
         {isEditing ? (
           <div className='profile-drop'>
-            <input type="email" value={newEmail} onChange={handleEmailChange} />
+            <input type="email" value={newEmail} onChange={handleEmailChange} className='input-profile-email-username'/>
             <button className='button-profile' onClick={handleEmailEdit}>Enviar</button>
-            <button className='button-cancelar'onClick={() => setIsEditing(false)}>Cancelar</button>
+            <button className='button-cancelar'onClick={() => setIsEditing(false)}>Cancel</button>
           </div>
         ) : (
-          <button className='button-profile' onClick={() => setIsEditing(true)}>Editar e-mail</button>
+          <button className='button-profile' onClick={() => setIsEditing(true)}>Edit your email</button>
         )}
         {errorMessage && <p>{errorMessage}</p>}
         </div>
       </div>
-      
-      <h2>My Request</h2>
-      {showSoli.map((eachElement, i)=>(
-        <li key={i}>
-          <h3>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city} </h3> {/* falta name y city*/}
-          <p>Message: {eachElement.message}</p>
-          
-        </li>
-      )
-      )}
-      </div>
+      <div className='user-requests-container'>
+      <h4 className='title-profile'>My Requests <IoIosCloudDone className='icon-requests'/></h4>
+      <div className='scrollable-menu'>
+        {showSoli.map((eachElement) => (
+          <div key={eachElement._id} className='section-request'>
+            <div className='section-box'>
+              <p className='section-name'>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city}</p>
+              <p className='section-name'>Message: {eachElement.message}</p>
+              </div>
+            </div>
+        ))}
+        </div>
+    </div>
+    </div>
   )
 }
 

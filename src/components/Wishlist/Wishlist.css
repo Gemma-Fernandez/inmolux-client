@@ -28,7 +28,8 @@
 
 @media (max-width: 768px) {
     .whish-button {
-        margin-right: 10px;
+        margin-right: 15px;
+        margin-top: 31px;
     }
     
 }

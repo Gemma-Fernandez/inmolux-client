@@ -5,6 +5,7 @@
   padding: 0;
   text-align: center;
   background-color: #ffffff;
+  margin: 1px solid white;
 }
 
 html, body {
@@ -82,7 +83,7 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 opacity: 0.9;
-z-index: -1;
+z-index: 1;
 }
 
 .logo1 {
@@ -101,7 +102,7 @@ z-index: -1;
   color: rgb(245, 243, 240);
   width: 30px;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .icon-vivienda {
@@ -156,7 +157,7 @@ height: 20px;
     
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1024px) {
   .navbar-container {
     width: 100%;
     height: auto;
@@ -165,28 +166,29 @@ height: 20px;
     .navbar-container-icons {
       display:flex;
       flex-direction: row;
+      justify-content: center;
+    align-items: center;
+    gap: 20px;
     }
     .logo1 {
-      width: 250px;
+      width: 200px;
       height: auto;
       text-align: left;
       margin-top: 20px;
+      
     }
     .icons-navbar {
       color: rgb(245, 243, 240);
-      width: 3rem;
-      height: auto;
-      padding: 80px;
+     width: 20px;
+      padding: 10px;
       cursor: pointer;
-      margin-top: 40px;
+      margin-top: 10px;
     }
     .icon-vivienda {
       color: rgb(245, 243, 240);
-      width: 2.5rem;
-      height: auto;
-      padding: 80px;
+      width: 3rem;
       cursor: pointer;
-      margin-top: 40px;
+      margin-top: 10px;
     }
 }
 
@@ -425,14 +427,16 @@ z-index: -1;
 
 
 /*-------user profile------------*/
+
 .profile-container{
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center; 
+  margin: auto;
   overflow: hidden;
 }
 .profile-container::before {
@@ -442,9 +446,9 @@ z-index: -1;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('./images/background-navbar.jpg') center center no-repeat;
+  background: url('./images/background-user-profile2.avif') center center no-repeat;
   background-size: cover;
-  opacity: 0.3; 
+  opacity: 0.6; 
   z-index: 0; 
   pointer-events: none;
 }
@@ -454,7 +458,8 @@ z-index: -1;
 .profile-email,
 .image,
 .button-profile,
-.button-cancelar {
+.button-cancelar,
+.user-requests-container {
   position: relative;
   z-index: 1;
 }
@@ -467,14 +472,13 @@ z-index: -1;
   justify-content: center;
   padding: 10px;
   font-size: 30px;
-  color: rgb(245, 243, 240);
+  color: #055f6d;
   font-weight: lighter;
   font-style: italic;
-  text-shadow: 2px 1px 10px  #088da1;
+  text-shadow: 2px 1px 10px  #33bcd1f1;
   z-index: 1;
-  position: relative;
-  animation: fadeIn 3s ease-in-out;
-  margin-top: 40px;
+  margin-top: 20px;
+  font-family: "Playfair Display SC", serif;
 }
 
 .image {
@@ -483,25 +487,37 @@ z-index: -1;
   height: auto;
   border-radius: 100%;
   margin-top: 20px;
+  box-shadow: 2px 1px 20px  #ffffff;
+  transition: transform 0.3s ease-in-out;
+  animation: zoomIn 1.5s ease-in-out forwards;
 }
-
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9); 
+    opacity: 0;           
+  }
+  100% {
+    transform: scale(1);  
+    opacity: 1;           
+  }
+}
 .profile-name-email-edit {
   display: flex;
   flex-direction: row;
-  
-  flex-grow: 4;
+ margin: auto;
+ margin-top: 0;
+padding: 0;
 }
 
 .profile-name,
  .profile-email {
   margin: 0;
   padding: 10px;
-  font-size: 18px;
-  color: rgb(245, 243, 240);
-  font-weight: lighter;
+  font-size: 19px;
+  color:  #055461;
   font-style: italic;
   text-shadow: 2px 1px 10px  #088da1;
-  margin-top: 20px;
+ 
 }
 
 .button-profile{
@@ -544,6 +560,82 @@ z-index: -1;
   gap: 10px;
   z-index: 1;
 }
+
+.user-requests-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.input-profile-email-username{
+  max-width: 150px;
+ padding: 5px;
+  font-size: 13px;
+  background-color:#055461;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 246, 255, 0.6), 0 0 10px rgba(0, 71, 255, 0.4);
+}
+
+.section-request {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.section-box{
+  border: 1px solid white;
+  margin-bottom: 5px;
+  background-color: rgba(160, 82, 19, 0.616);
+  border-radius: 10px;
+}
+
+.section-name{
+  margin: 0;
+  font-size: 16px;
+  color:  #f3f5f5;
+  font-style: italic;
+  margin: 0;
+}
+
+.scrollable-menu {
+  max-height: 200px; 
+  overflow-y: auto; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  margin-top: 10px; 
+  border-radius: 5px; 
+}
+
+.title-profile {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  padding: 10px;
+  font-size: 25px;
+  color: #03272c;
+  font-style: italic;
+  text-shadow: 2px 1px 10px  #33bcd1f1;
+  z-index: 1;
+  font-family: "Playfair Display SC", serif;
+}
+
+.icon-requests{
+  font-size: 2rem;
+  margin-left: 5px;
+  color: #994c19f1;
+}
+
+@media (min-width: 1024px) {
+  .profile-container{
+    background: url('./images/background-user-profile1.avif') center center no-repeat;
+  }
+}
+
+
 
 
 /*---------wishlist------*/
