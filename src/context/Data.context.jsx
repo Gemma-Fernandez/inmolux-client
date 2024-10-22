@@ -6,7 +6,7 @@ import service from "../services/config.js"
 const DataContext = createContext();
 
 function DataWrapper({ children }) {
- const {user, authenticateUser, isLoggedIn} = useContext(AuthContext)
+ const {user} = useContext(AuthContext)
   const [allData, setAllData] = useState([])
   const [filteredData, setFilteredData] = useState([])
   const [solicitudes, setSolicitudes]=useState([])
@@ -15,7 +15,6 @@ function DataWrapper({ children }) {
 
   useEffect(() => {
     getData();
-    authenticateUser()
     if(user) {
       showSolicitudes()
     }

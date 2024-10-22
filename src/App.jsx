@@ -4,10 +4,10 @@ import Home from "./Pages/Home";
 import Login from "./Pages/auth/Login";
 import Signup from "./Pages/auth/Signup";
 import Vivienda from "./Pages/Vivienda";
-import NotFound from "./Pages/NotFound";
+import NotFound from "./Pages/NotFound/NotFound";
 import AdminProfile from "./Pages/AdminProfile";
-import ViviendasDetails from "./Pages/ViviendasDetails";
-import ErrorPage from "./Pages/ErrorPage"
+import ViviendasDetails from "./Pages/ViviendasDetails/ViviendasDetails";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage"
 import UserProfile from "./Pages/UserProfile";
 import NavBar from "./components/NavBar"
 import Footer from "./components/footer/Footer";

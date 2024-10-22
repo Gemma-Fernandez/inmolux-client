@@ -1,17 +1,33 @@
 import React from "react";
 import Video from "../components/Video"
-import {DataContext} from "../context/Data.context.jsx"
-import { useContext } from "react";
-import { useState} from "react";
+import { useState, useEffect} from "react";
+import axios from "axios"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 
 
 
 function Home() {
- const {allData} = useContext(DataContext)
- console.log(allData)
+ const [viviendas, setViviendas] = useState([])
   const [center, setCenter] = useState([40.4637, -3.7492])
+ 
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_SERVER_URL}/api/vivienda/`
+        );
+        
+        setViviendas(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData()
+  }, [])
+ 
+
+  
 
   return (
     <>
@@ -27,7 +43,7 @@ function Home() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           
-          {allData.map((vivienda) => (
+          {viviendas.map((vivienda) => (
             <Marker key={vivienda._id} position={vivienda.coordinates}>
               <Popup>
                 <b>{vivienda.name}</b>

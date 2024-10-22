@@ -1,11 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import {DataContext} from "../context/Data.context";
-import { AuthContext } from "../context/auth.context";
+import {DataContext} from "../../context/Data.context";
+import { AuthContext } from "../../context/auth.context";
 import { useContext } from "react";
-import service from "../services/config.js";
+import service from "../../services/config.js";
 import Carousel from 'react-bootstrap/Carousel';
+import "./ViviendasDetails.css"
 
 
 function ViviendasDetails() {

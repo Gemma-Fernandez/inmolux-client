@@ -1,5 +1,6 @@
 import React from 'react'
-import niña from "../images/niña.jpg"
+import niña from "../../images/niña.jpg"
+import "./ErrorPage.css"
 
 function ErrorPage() {
   return (

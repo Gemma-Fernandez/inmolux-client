@@ -12,69 +12,98 @@
     "__v": 0,
     "image1": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/583447571.jpg?k=04f7b03874b971a7358ce20ca7f6873e2236e5c3aa49af71f53ee6ec8bb9ab62&o=&hp=1",
     "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/579127797.jpg?k=9bf4c3836206f3eb143da019a72ab9f22f8f4fb9c68c013ceaa962a65ef70154&o=&hp=1",
-    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/537746404.jpg?k=b9309d409a355bf8bf20011161db5090a271b57a6fe7b334ae65e3b9bc154982&o=&hp=1"
+    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/537746404.jpg?k=b9309d409a355bf8bf20011161db5090a271b57a6fe7b334ae65e3b9bc154982&o=&hp=1",
+    "coordinates": [
+      {
+        "$numberDecimal": "40.4168"
+      },
+      {
+        "$numberDecimal": "-3.7038"
+      }
+    ]
   },
-  {
-    
-    "name": "Valencia Grand Suite",
-    "city": "Valencia",
-    "description": "Exclusive luxury apartment in front of Malvarrosa beach, with spectacular views of the Mediterranean Sea. It has a large terrace, a high-end equipped kitchen and avant-garde design spaces.",
-    "property_type": "Aparment",
-    "bathrooms": "4",
-    "bedrooms": "4",
-    "price": 1000,
-    "__v": 0,
-    "image1": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967230.jpg?k=41d3d321b7551523c4e5264697fecdcb4c9b7db320b0bc9e59640d8725bc2a54&o=&hp=1",
-    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967236.jpg?k=43858d6e01c29b886b513bf92312d47c6f20bef141f4a6474d7764160bde1f50&o=&hp=1",
-    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967291.jpg?k=8b9b9ed2df8caa39093368163fe508cc18dd9fb0e20d2e950b7680d0705069ad&o=&hp=1"
-  },
-  {
-    "_id": {
-      "$oid": "670fe024da65ba1e2b485c92"
+  {"name": "Valencia Grand Suite",
+  "city": "Valencia",
+  "description": "Exclusive luxury apartment in front of Malvarrosa beach, with spectacular views of the Mediterranean Sea. It has a large terrace, a high-end equipped kitchen and avant-garde design spaces.",
+  "property_type": "Aparment",
+  "bathrooms": "4",
+  "bedrooms": "4",
+  "price": 11000,
+  "__v": 0,
+  "image1": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967230.jpg?k=41d3d321b7551523c4e5264697fecdcb4c9b7db320b0bc9e59640d8725bc2a54&o=&hp=1",
+  "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967236.jpg?k=43858d6e01c29b886b513bf92312d47c6f20bef141f4a6474d7764160bde1f50&o=&hp=1",
+  "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967291.jpg?k=8b9b9ed2df8caa39093368163fe508cc18dd9fb0e20d2e950b7680d0705069ad&o=&hp=1",
+  "coordinates": [
+    {
+      "$numberDecimal": "39.505012"
     },
+    {
+      "$numberDecimal": "-0.324420"
+    }
+  ]
+}
+  ,
+  {
     "name": "Villa Pescaito",
-    "city": "Marbella",
-    "description": "Located 1.7 km from Playa Nueva Andalucía, Villa Pescaito offers accommodation in Marbella with access to a hot tub. This holiday home also features a private pool and free WiFi. This air-conditioned house or chalet is made up of 6 separate bedrooms, a fully equipped kitchen and 4 bathrooms. TV is offered. Cortijo Blanco Beach is 2.2 km from the accommodation, and Praia do Rio Verde is 2.4 km.",
-    "property_type": "House",
-    "bathrooms": "5",
-    "bedrooms": "6",
-    "price": 17000,
-    "__v": 0,
-    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967311.jpg?k=adb9d8e5b989f230fcd8009a3e472fe1bd2ce2a57e2f4c68d2302bf1c36e5b7d&o=&hp=1",
-    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967238.jpg?k=686edc0469e4383cf26d7eb023c463e4de1281718920cd7292b47da262269dac&o=&hp=1",
-    "image1": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/586967227.jpg?k=58df70908a98b88efba1c57a413c215ff03d99d102a80e5f4ba6d599af03aca3&o="
-  },
-  {
-    "_id": {
-      "$oid": "670fe079da65ba1e2b485c94"
+  "city": "Marbella",
+  "description": "Located 1.7 km from Playa Nueva Andalucía, Villa Pescaito offers accommodation in Marbella with access to a hot tub. This holiday home also features a private pool and free WiFi. This air-conditioned house or chalet is made up of 6 separate bedrooms, a fully equipped kitchen and 4 bathrooms. TV is offered. Cortijo Blanco Beach is 2.2 km from the accommodation, and Praia do Rio Verde is 2.4 km.",
+  "property_type": "House",
+  "bathrooms": "5",
+  "bedrooms": "6",
+  "price": 17000,
+  "__v": 0,
+  "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967311.jpg?k=adb9d8e5b989f230fcd8009a3e472fe1bd2ce2a57e2f4c68d2302bf1c36e5b7d&o=&hp=1",
+  "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/586967238.jpg?k=686edc0469e4383cf26d7eb023c463e4de1281718920cd7292b47da262269dac&o=&hp=1",
+  "image1": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/586967227.jpg?k=58df70908a98b88efba1c57a413c215ff03d99d102a80e5f4ba6d599af03aca3&o=",
+  "coordinates": [
+    {
+      "$numberDecimal": "36.504399"
     },
-    "name": "Villa Casablanca",
-    "city": "Marbella",
-    "description": "Located 1.7 km from Playa Nueva Andalucía, Casablanca offers accommodation in Marbella with access to a hot tub. This holiday home also features a private pool and free WiFi. This air-conditioned house or chalet is made up of 6 separate bedrooms, a fully equipped kitchen and 4 bathrooms. TV is offered. Cortijo Blanco Beach is 2.2 km from the accommodation, and Praia do Rio Verde is 2.4 km.",
-    "property_type": "House",
-    "bathrooms": "7",
-    "bedrooms": "6",
-    "price": 18500,
-    "__v": 0,
-    "image1": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/294763105.jpg?k=32ab7bc1fa8a27d93798ee74acbb9b615168aa3228246aa1bdd78e01d16c03e1&o=&hp=1",
-    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/344334871.jpg?k=69cb38882627bab4662a4009591c0f2a8a82e062fca146ca76b37e379e47c0b6&o=&hp=1",
-    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/548089331.jpg?k=726986d60965aa5826988fe337c02627c5f8c61d13ee0a6f798ae024e243d516&o=&hp=1"
-  },
-  {
-    "_id": {
-      "$oid": "670fe0a8da65ba1e2b485c96"
+    {
+      "$numberDecimal": "-4.799653"
+    }
+  ]
+}
+  ,
+  {"name": "Villa Casablanca",
+  "city": "Marbella",
+  "description": "Located 1.7 km from Playa Nueva Andalucía, Casablanca offers accommodation in Marbella with access to a hot tub. This holiday home also features a private pool and free WiFi. This air-conditioned house or chalet is made up of 6 separate bedrooms, a fully equipped kitchen and 4 bathrooms. TV is offered. Cortijo Blanco Beach is 2.2 km from the accommodation, and Praia do Rio Verde is 2.4 km.",
+  "property_type": "House",
+  "bathrooms": "7",
+  "bedrooms": "6",
+  "price": 18500,
+  "__v": 0,
+  "image1": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/294763105.jpg?k=32ab7bc1fa8a27d93798ee74acbb9b615168aa3228246aa1bdd78e01d16c03e1&o=&hp=1",
+  "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/344334871.jpg?k=69cb38882627bab4662a4009591c0f2a8a82e062fca146ca76b37e379e47c0b6&o=&hp=1",
+  "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/548089331.jpg?k=726986d60965aa5826988fe337c02627c5f8c61d13ee0a6f798ae024e243d516&o=&hp=1",
+  "coordinates": [
+    {
+      "$numberDecimal": "36.464621"
     },
-    "name": "Villa Barceloneta",
-    "city": "Barcelona",
-    "description": "Featuring city views, Barcelona Beach Home offers accommodation with a balcony and a kettle, about a 5-minute walk from Platja de Sant Miquel. This beachfront property offers free private parking, free WiFi and access to a terrace. This air-conditioned house or chalet consists of 6 bedrooms, a living room, a fully equipped kitchen with a refrigerator and a coffee machine, and 4 bathrooms with a bidet and a shower. There are towels and bed linen in the house or chalet. Popular points of interest near the accommodation include Platja de la Barceloneta, Platja de Sant Sebastià and Santa María del Mar.",
-    "property_type": "House",
-    "bathrooms": "6",
-    "bedrooms": "4",
-    "price": 20000,
-    "__v": 0,
-    "image1": "https://img.freepik.com/free-photo/beautiful-tropical-beach-front-hotel-resort-with-swimming-pool-paradise-destination-vacations-ge_1258-150769.jpg?t=st=1729093772~exp=1729097372~hmac=5b0e7c3d114434f25095869f0d93600c720580e70150cde2f808afb97178a40f&w=900",
-    "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/374476526.jpg?k=5ae6d24015915d89f771bb2b3c679d7700df5d94f62e79bc1a2ed99582330623&o=&hp=1",
-    "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/374476831.jpg?k=7af6cc0b2d147df8f3930128d8f648f0f2a850e5a9970cfc75bf9fcfa74aca66&o=&hp=1"
+    {
+      "$numberDecimal": "-5.013096"
+    }
+  ]
+  },
+  { "name": "Villa Barceloneta",
+  "city": "Barcelona",
+  "description": "Featuring city views, Barcelona Beach Home offers accommodation with a balcony and a kettle, about a 5-minute walk from Platja de Sant Miquel. This beachfront property offers free private parking, free WiFi and access to a terrace. This air-conditioned house or chalet consists of 6 bedrooms, a living room, a fully equipped kitchen with a refrigerator and a coffee machine, and 4 bathrooms with a bidet and a shower. There are towels and bed linen in the house or chalet. Popular points of interest near the accommodation include Platja de la Barceloneta, Platja de Sant Sebastià and Santa María del Mar.",
+  "property_type": "House",
+  "bathrooms": "6",
+  "bedrooms": "4",
+  "price": 20000,
+  "__v": 0,
+  "image1": "https://img.freepik.com/free-photo/beautiful-tropical-beach-front-hotel-resort-with-swimming-pool-paradise-destination-vacations-ge_1258-150769.jpg?t=st=1729093772~exp=1729097372~hmac=5b0e7c3d114434f25095869f0d93600c720580e70150cde2f808afb97178a40f&w=900",
+  "image2": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/374476526.jpg?k=5ae6d24015915d89f771bb2b3c679d7700df5d94f62e79bc1a2ed99582330623&o=&hp=1",
+  "image3": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/374476831.jpg?k=7af6cc0b2d147df8f3930128d8f648f0f2a850e5a9970cfc75bf9fcfa74aca66&o=&hp=1",
+  "coordinates": [
+    {
+      "$numberDecimal": "41.284038"
+    },
+    {
+      "$numberDecimal": "2.024056"
+    }
+  ]
   }
 
 ]
