@@ -9,7 +9,7 @@ import { Link, useParams } from "react-router-dom";
 
 
 function ShowWishlist() {
-    const params= useParams()
+    const params = useParams()
     const { removeWish, wishlist, getWishlist, setWishlist } = useContext(WishlistContext);
     const { user, isLoggedIn } = useContext(AuthContext)
     const [isLoading, setIsLoading] = useState(true);
@@ -43,20 +43,23 @@ function ShowWishlist() {
 
     return (
         <div>
-            <h1 className='wishlist-title'> Whislist <PiHeartDuotone className='icon-wish'/></h1>
+            <h1 className='wishlist-title'> Whislist <PiHeartDuotone className='icon-wish' /></h1>
             {wishlist.length === 0 ? (
                 <p>wishlist vacía.</p>
             ) : (
                 <div className='wish-container'>
                     {wishlist.map((eachVivienda, i) => (
                         <div key={i} className='wish-card'>
-                            <Link to={`/vivienda/${eachVivienda._id}`}>
+
                             <h3 className='wish-title'>{eachVivienda.name}</h3>
-                            <img src={eachVivienda.image1} alt="image" className='wish-image'></img>
+                            <Link to={`/vivienda/${eachVivienda._id}`}>
+                                <img src={eachVivienda.image1} alt="image" className='wish-image'></img>
+                            </Link>
                             <p className='wish-description'>{eachVivienda.city}</p>
                             <p className='wish-price'>{eachVivienda.price} €</p>
+
                             <button onClick={() => removeWish(eachVivienda._id)} className='icon-delete-wish'><TiDelete /></button>
-                        </Link>
+
                         </div>
                     ))}
                 </div>
