@@ -5,7 +5,7 @@ import Ratio from "react-bootstrap/Ratio";
 function Video() {
   return (
    
-    <div className="video-container" style={{ width: "100%", height: "auto" }}>
+    <div className="video-container" >
       <Ratio aspectRatio="16x9">
         <video autoPlay loop muted playsInline className="w-100 h-100">
           <source src={video} type="video/mp4" />
