@@ -23,6 +23,7 @@ function EditForm() {
   const [bedrooms, setBedrooms] = useState("");
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
+  const [isEdit, setIsEdit] = useState("")
 
   useEffect(() => {
     service
@@ -36,7 +37,9 @@ function EditForm() {
         setBedrooms(response.data.bedrooms);
         setImage(response.data.image);
         setPrice(response.data.price);
+        
       })
+      
       .catch((error) => {
         console.log(error);
       });
@@ -59,8 +62,7 @@ function EditForm() {
     try {
       const response= await service.put(`/vivienda/${viviendasId}/edit`, editVivienda);
       
-      localStorage.setItem("authToken", response.data.authToken);
-      await authenticateUser();
+      setIsEdit(response.data)
       navigate(`/vivienda/${viviendasId}`);
     } catch (error) {
       console.log(error);

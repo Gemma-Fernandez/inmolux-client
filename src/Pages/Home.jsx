@@ -17,7 +17,7 @@ function Home() {
         const response = await axios.get(
           `${import.meta.env.VITE_SERVER_URL}/api/vivienda/`
         );
-        
+        console.log(response.data)
         setViviendas(response.data);
       } catch (error) {
         console.log(error);

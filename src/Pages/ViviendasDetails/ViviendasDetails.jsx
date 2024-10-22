@@ -22,6 +22,7 @@ function ViviendasDetails() {
   const[message, setMessage]=useState("")
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
+  const [isDelete, setIsDelete] =useState(false)
 
   useEffect(() => {
     const vivienda= allData.find((vivienda)=>vivienda._id === viviendasId);
@@ -33,8 +34,8 @@ function ViviendasDetails() {
       const response= await service.delete(`/vivienda/${viviendasId}`)
       setAllData((newData)=> newData.filter((element)=> element._id !==viviendasId))
       
-      localStorage.setItem("authToken", response.data.authToken);
-      await authenticateUser();
+      
+      setIsDelete()
       navigate("/vivienda");
     } catch (error) {
       console.log(error)

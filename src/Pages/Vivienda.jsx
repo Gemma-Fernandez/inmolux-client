@@ -39,7 +39,7 @@ function Vivienda() {
   }
 
   const dataToDisplay = filteredData.length > 0 ? filteredData : viviendas;
-  
+  console.log(dataToDisplay)
 
   return (
     <>

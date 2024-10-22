@@ -21,7 +21,7 @@ function ShowWishlist() {
                 if (isLoggedIn && user) {
                     const response = await service.get("/user/wishlist/vivienda")
                     setWishlist(response.data)
-                    //console.log(response.data)
+                    console.log(response.data)
                 }
             } catch (error) {
                 console.log(error)
