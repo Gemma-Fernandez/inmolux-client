@@ -2,12 +2,28 @@
 #root {
   width: 100%;
   height: 100%;
-  margin: 1px;
   padding: 0;
   text-align: center;
   background-color: #ffffff;
   margin: 1px;
 }
+
+body, html {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-app {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px; 
+}
+
 
 
 /*
@@ -624,7 +640,6 @@ padding: 0;
 }
 
 .section-box{
-  border: 1px solid white;
   margin-bottom: 5px;
   background-color: rgba(160, 82, 19, 0.616);
   border-radius: 10px;
@@ -633,15 +648,14 @@ padding: 0;
 .section-name{
   margin: 0;
   font-size: 16px;
-  color:  #f3f5f5;
+  color:  #0b0b0b;
   font-style: italic;
   margin: 0;
 }
 
 .scrollable-menu {
   max-height: 200px; 
-  overflow-y: auto; 
-  border: 1px solid #ccc; 
+  overflow-y: auto;  
   padding: 10px; 
   margin-top: 10px; 
   border-radius: 5px; 
@@ -655,7 +669,7 @@ padding: 0;
   justify-content: center;
   padding: 10px;
   font-size: 25px;
-  color: #03272c;
+  color: #0e0f0f;
   font-style: italic;
   text-shadow: 2px 1px 10px  #33bcd1f1;
   z-index: 1;
@@ -668,10 +682,100 @@ padding: 0;
   color: #994c19f1;
 }
 
+@media (max-width: 768px){
+  .title-profile {
+    font-size: 22px;
+    color: #0e0f0f;
+    margin-top: 10px;
+    margin: 0;
+    padding: 5px;
+  }
+  .section-request {
+    margin-bottom: 5px;
+  }
+
+  .section-box{
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.889);
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  .section-name{
+    font-size: 12px;
+  }
+  .user-requests-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 200px;
+  }
+
+  .scrollable-menu{
+    max-height: 200px; 
+    margin-bottom: 50px;
+  }
+  .icon-requests{
+    font-size: 1.5rem;
+    margin-left: 5px;
+    color:  #055461;
+  }
+}
+
 @media (min-width: 1024px) {
-  .profile-container{
-    background-color: #03272c;
-    position: relative;
+  .profile-container::before {
+    background: url('./images/background-user-profile1.avif') center center no-repeat;
+  }
+
+  .profile-title {
+    font-size: 50px;
+    color: #121212;
+    
+  }
+  
+  .image {
+    max-width: 250px;
+    margin-top: 30px;
+    box-shadow: 2px 1px 20px  #0a0a0a;
+  }
+
+  .profile-name,
+   .profile-email {
+    font-size: 29px;
+    color: #121212;
+   
+  }
+  
+  .button-profile{
+    min-width: 140px;
+  }
+  
+  .button-cancelar {
+    min-width: 100px;
+  }
+  
+  .profile-drop{
+    gap: 15px;
+  }
+  
+  .input-profile-email-username{
+    max-width: 35rem;
+    font-size: 15px;
+  }
+
+  .user-requests-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 300px;
+  }
+
+  .scrollable-menu{
+    max-height: 300px; 
+  }
+
+  .title-profile {
+    font-size: 30px;
+    padding: 0;
+    color: #0e0f0f;
   }
 }
 
