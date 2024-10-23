@@ -75,24 +75,31 @@ function ViviendasDetails() {
     <div>
       {viviendaToShow ? (
         <>
-          <h1>{viviendaToShow.name}</h1>
-          <Carousel  fade>
-          <Carousel.Item> <img src={viviendaToShow.image1} style={{ width: "300px" }} />  </Carousel.Item>
-          <Carousel.Item><img src={viviendaToShow.image2} style={{ width: "300px" }} /></Carousel.Item>
-          <Carousel.Item> <img src={viviendaToShow.image3} style={{ width: "300px" }} /></Carousel.Item>
+          <h1 className="title-det">{viviendaToShow.name}</h1>
+          <Carousel  fade >
+          <Carousel.Item> <img src={viviendaToShow.image1} className="img-det" />  </Carousel.Item>
+          <Carousel.Item><img src={viviendaToShow.image2} className="img-det" /></Carousel.Item>
+          <Carousel.Item> <img src={viviendaToShow.image3} className="img-det"/></Carousel.Item>
           </Carousel>
-          <p>{viviendaToShow.city}</p>
+          <h5 className="city-det">{viviendaToShow.city}</h5>
+          <div className="container-det">
+            <div className="info-det">
           <p>{viviendaToShow.description}</p>
-          <p>Type: {viviendaToShow.property_type}</p>
-          <p>Bathrooms: {viviendaToShow.bathrooms}</p>
-          <p>Bedrooms: {viviendaToShow.bedrooms}</p>
-          <p>{viviendaToShow.price} €</p>
+
+            </div>
+          <div className="types-det">
+          <p><strong>Type:</strong> {viviendaToShow.property_type}</p>
+          <p><strong>Bathrooms:</strong> {viviendaToShow.bathrooms}</p>
+          <p><strong>Bedrooms:</strong> {viviendaToShow.bedrooms}</p>
+          <p><strong>Price:</strong> {viviendaToShow.price} €</p>
+          </div>
+          </div>
           {admin? (
           <Link to={`/vivienda/${viviendasId}/edit`}>
-            <button>Edit Vivienda</button>
+            <button className="button-det">Edit information</button>
           </Link>  
           ): null}
-          {admin ? (<button onClick={handleDelete} >Delete</button>) : null
+          {admin ? (<button onClick={handleDelete} className="button-det">Delete</button>) : null
           }
         </>
       ) : (

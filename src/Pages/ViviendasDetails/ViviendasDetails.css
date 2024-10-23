@@ -1,0 +1,59 @@
+.button-det{
+    margin:15px 15px 20px 15px;
+    border-radius: 10px;
+    padding:10px;
+    background-color:#197482 ;
+    color: white;
+    border: 2px solid #197482;
+    box-shadow: 10px 5px 10px rgb(129, 127, 127);
+
+}
+.button-det:hover{
+    background-color: #A2D0D3;
+}
+.container-det{
+    display: flex;
+    justify-content: space-around;
+    margin: 8px;
+    font-size: 15px
+}
+.info-det{
+    text-align: justify;
+    width:60%;
+    margin-top: 10px;
+}
+.types-det{
+    margin: 10px
+}
+.title-det{
+    margin:15px;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: 2px 1px 10px  #555858;
+}
+.city-det{
+    margin:10px;
+    
+}
+.img-det{
+    width:350px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+@media (min-width: 768px){
+    .img-det{
+        width:450px;
+        height: 330px;
+        object-fit: cover;
+    }
+    .container-det{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 8px;
+        font-size: 22px
+    }
+    .city-det{
+        margin:10px;
+        font-size: 23px
+    }
+}

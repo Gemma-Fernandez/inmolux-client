@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
+import { DataContext } from "../../context/Data.context";
 import service from "../../services/config.js";
 import "./Formularios.css"
 
@@ -13,6 +14,7 @@ function EditForm() {
   const { viviendasId } = useParams();
   const navigate = useNavigate();
   const{authenticateUser}=useContext(AuthContext)
+  const {setAllData } = useContext(DataContext);
 
 
   const [name, setName] = useState("");
@@ -23,7 +25,7 @@ function EditForm() {
   const [bedrooms, setBedrooms] = useState("");
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
-  const [isEdit, setIsEdit] = useState("")
+  
 
   useEffect(() => {
     service
@@ -62,7 +64,11 @@ function EditForm() {
     try {
       const response= await service.put(`/vivienda/${viviendasId}/edit`, editVivienda);
       
-      setIsEdit(response.data)
+      setAllData((prevData) =>
+        prevData.map((vivienda) =>
+          vivienda._id === viviendasId ? response.data : vivienda
+        )
+      );
       navigate(`/vivienda/${viviendasId}`);
     } catch (error) {
       console.log(error);
