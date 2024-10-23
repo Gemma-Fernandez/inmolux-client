@@ -3,8 +3,8 @@ import { Link} from "react-router-dom";
 import { useContext } from "react";
 
 import { useState, useEffect } from "react";
-import service from "../services/config";
-import { DataContext } from "../context/Data.context";
+import service from "../../services/config.js";
+import { DataContext } from "../../context/Data.context";
 
 
 function AdminProfile() {

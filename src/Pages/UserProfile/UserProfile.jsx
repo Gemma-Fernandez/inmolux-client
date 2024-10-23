@@ -1,10 +1,11 @@
 import React from 'react'
 import { useContext } from "react";
-import { AuthContext } from "../context/auth.context";
+import { AuthContext } from "../../context/auth.context";
 import { useState, useEffect } from "react";
-import service from "../services/config";
-import { DataContext } from "../context/Data.context";
+import service from "../../services/config.js";
+import { DataContext } from "../../context/Data.context";
 import { IoIosCloudDone } from "react-icons/io";
+import './UserProfile.css'
 
 
 

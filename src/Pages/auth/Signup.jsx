@@ -7,6 +7,7 @@ import { AiTwotoneMail } from "react-icons/ai";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { IoImageOutline } from "react-icons/io5";
+import './Signup.css'
 
 function Signup() {
   const navigate= useNavigate()

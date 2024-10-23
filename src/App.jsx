@@ -5,10 +5,10 @@ import Login from "./Pages/auth/Login";
 import Signup from "./Pages/auth/Signup";
 import Vivienda from "./Pages/Vivienda";
 import NotFound from "./Pages/NotFound/NotFound";
-import AdminProfile from "./Pages/AdminProfile";
+import AdminProfile from "./Pages/AdminProfile/AdminProfile";
 import ViviendasDetails from "./Pages/ViviendasDetails/ViviendasDetails";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage"
-import UserProfile from "./Pages/UserProfile";
+import UserProfile from "./Pages/UserProfile/UserProfile";
 import NavBar from "./components/NavBar"
 import Footer from "./components/footer/Footer";
 import PrivateRoute from "./components/PrivateRoute"
