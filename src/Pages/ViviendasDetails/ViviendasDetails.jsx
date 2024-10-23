@@ -107,8 +107,9 @@ function ViviendasDetails() {
       )}
       {!admin? (
         <form onSubmit={handleSubmit}> 
-        <h3>Are you interested in? Send a request for this property</h3>
+        <h3 className="solicitud-det">Are you interested in?</h3> <h6 >Send a request for this property</h6>
             <textarea
+            className="textarea-det"
               name="message"
               value={message}
               onChange={(event) => setMessage(event.target.value)}
@@ -116,7 +117,7 @@ function ViviendasDetails() {
               required
             />
             <br/>
-            <button type="submit">Send Request</button>
+            <button type="submit" className="button-send">Send Request</button>
           </form> 
       ): null}
       {error && <p style={{ color: "red" }}>{error}</p>}

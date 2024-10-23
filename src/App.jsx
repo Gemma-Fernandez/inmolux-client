@@ -16,6 +16,7 @@ import EditForm from "./components/formulariosVivienda/EditForm"
 import ShowWishlist from "./Pages/ShowWishlist";
 import AddViviendaForm from "./components/formulariosVivienda/AddViviendaForm"
 import Search from "./Pages/Search";
+import Map from "./Pages/Map/Map"
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path={"/vivienda/search"} element={<Search />} />
         <Route path={"/vivienda/addVivienda"} element={<PrivateRoute><AddViviendaForm /></PrivateRoute>} />
         <Route path={"/admin/profile"} element={<AdminProfile />} /> 
+        <Route path={"/map"} element={<Map />}/>
         <Route path={"*"} element={<NotFound />} />
         <Route path={"/500"} element={<ErrorPage />} />
       </Routes>

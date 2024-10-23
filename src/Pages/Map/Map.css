@@ -1,0 +1,17 @@
+
+
+.leaflet-container {
+    height: 250px; /* example */
+    width: 300px; /* example */
+    box-shadow: 1px 10px 20px rgb(129, 127, 127);
+    border:1px solid  #fdfdfd;
+    
+  }
+  .map-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+   
+    
+  }
