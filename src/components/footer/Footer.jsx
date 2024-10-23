@@ -10,24 +10,25 @@ function Footer() {
   return (
     <div className="footer-container">
       <div className="footer-elements">
-        <div>
+        <div >
           <h4 className="footer-title">About</h4>
-          <a href=""><MdMiscellaneousServices /> Our Services</a> <br/>
-          <a href=""><FaHouseFlag /> Our Story</a>
+          <a  href="" className="footer-small-content"><MdMiscellaneousServices /> Our Services</a> <br/>
+          <a className="footer-small-content" href=""><FaHouseFlag /> Our Story</a>
         </div>
         <div>
           <h4 className="footer-title">Develop by:</h4>
-          <a href="https://github.com/Malu888"> <FaGithub /> Malú Dietrich</a>
+          <a className="footer-small-content" href="https://github.com/Malu888"> <FaGithub /> Malú Dietrich</a>
           <br />
-          <a href="https://github.com/Gemma-Fernandez"> <FaGithub /> Gemma Fernandez</a>
+          <a className="footer-small-content" href="https://github.com/Gemma-Fernandez"> <FaGithub /> Gemma Fernandez</a>
         </div>
         <div>
           <h4 className="footer-title">Contact us</h4>
-          <a href=""><MdOutlineEmail/> support@inmolux.com</a> <br/>
-          <a href=""><BiPhoneCall /> +34 688 999 898</a>
+          <a className="footer-small-content" href=""><MdOutlineEmail/> support@inmolux.com</a> <br/>
+          <a className="footer-small-content" href=""><BiPhoneCall /> +34 688 999 898</a>
         </div>
       </div>
-      <p>© 2024 Copyright Inmo.Lux Inc.</p>
+      <div><p className="last-content-footer">© 2024 Copyright Inmo.Lux Inc.</p></div>
+      
     </div>
   );
 }

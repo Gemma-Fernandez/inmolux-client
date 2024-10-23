@@ -10,6 +10,7 @@ import "leaflet/dist/leaflet.css"
 function Home() {
  const [viviendas, setViviendas] = useState([])
   const [center, setCenter] = useState([40.4637, -3.7492])
+  const [showMap, setShowMap] = useState(false)
  
   useEffect(() => {
     const getData = async () => {
@@ -26,17 +27,20 @@ function Home() {
     getData()
   }, [])
  
+  const handleTransition = () => {
+    setShowMap(true);
+  };
 
-  
 
   return (
     <>
-    <div className="home-video">
+    <div className="home-video" >
+    <h1 className="title-home">Welcome to InmoLux</h1>
       <Video/>
       </div>
       <br/>
       <div className="map-container">
-        <h2 className="home-title">Find our homes</h2>
+      <h2 className="home-title">Find our homes</h2>
         <MapContainer center={center} zoom={5} scrollWheelZoom={true} className="image-map">
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

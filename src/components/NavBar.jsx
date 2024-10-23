@@ -4,13 +4,12 @@ import { AuthContext } from "../context/auth.context";
 import logo1 from "../images/logo2.png";
 import { FaUser } from "react-icons/fa";
 import { FaUserPlus } from "react-icons/fa";
-import { TiHome } from "react-icons/ti";
+import { ImHome } from "react-icons/im";
 import { IoMdLogOut } from "react-icons/io";
 import { FaUserEdit } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Wishlist from "./Wishlist/Wishlist.jsx";
-import { GrSearchAdvanced } from "react-icons/gr";
-
+import { IoSearchSharp } from "react-icons/io5";
 
 import React from "react";
 
@@ -38,18 +37,19 @@ function NavBar() {
         <img src={logo1} className="logo1" alt="logo" />
       </Link>
       <div className="navbar-container-icons">
-        <Link to="/vivienda">
-          <TiHome className="icon-vivienda" title="Listado de casas" />
-        </Link>
+       
 
         {isLoggedIn ? (
           <>
+           <Link to="/vivienda">
+          < ImHome className="icon-vivienda" title="Listado de casas" />
+        </Link>
             {admin ? (
-              <Link to="/admin/profile">
+              <Link to="/admin/profile" title="Administrator Profile">
                 <FaUserEdit className="icon-vivienda" />
               </Link>
             ) : (
-              <Link to="/user/profile">
+              <Link to="/user/profile" title="User Profile">
                 <FaUserEdit className="icon-vivienda" />
               </Link>
             )}
@@ -61,26 +61,29 @@ function NavBar() {
               />
             </Link>
 
-            <Link to="/vivienda/search" className="search-mobile">
-            <GrSearchAdvanced className="icons-navbar" title="Search"/>
+            <Link to="/vivienda/search" title="Search">
+            <IoSearchSharp className="icon-vivienda"/>
             </Link>
             
-            <Link to="/user/wishlist">
-            <Wishlist title='wishlist'/>
+            <Link to="/user/wishlist" title="wishlist">
+            <Wishlist className='whish-button'/>
             </Link>
 
            
           </>
         ) : (
           <>
+           <Link to="/vivienda"  title="Listado de casas">
+          <ImHome className="icon-vivienda" />
+        </Link>
             <Link to="/login">
-              <FaUser className="icons-navbar" />
+              <FaUser className="icon-vivienda" />
             </Link>
             <Link to="/signup">
-              <FaUserPlus className="icons-navbar" title="Signup" />
+              <FaUserPlus  className="icon-vivienda" title="Signup" />
             </Link>
-            <Link to="/vivienda/search" className="search-mobile">
-            <GrSearchAdvanced className="icons-navbar" title="Search"/>
+            <Link to="/vivienda/search" title="Search">
+            <IoSearchSharp className="icon-vivienda"/>
             </Link>
           </>
         )}

@@ -1,65 +1,64 @@
 .whish-button {
-    background: none;
-    color: rgb(245, 243, 240);
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-top: 40px;
-    border: none;
-    padding: 0;
-    position: relative;
-    margin-right: 10px;
+  background: none;
+  color: rgb(245, 243, 240);
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 40px;
+  border: none;
+  padding: 0;
+  position: relative;
+  margin-right: 10px;
 }
 
 .whish-state {
-    background-color: red;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 0;
-    left: 1rem;
-    color: aliceblue;
-    font-size: 12px;
-    font-weight: 700;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  color: aliceblue;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
-    .whish-button {
-        margin-right: 15px;
-        margin-top: 31px;
-    }
-    
+  .whish-button {
+    margin-right: 15px;
+    margin-top: 31px;
+  }
 }
 
-@media (min-width: 1024px) {
-    
-    .whish-button {
-        background: none;
-        color: rgb(245, 243, 240);
-        font-size: 2rem;
-        cursor: pointer;
-        border: none;
-        position: relative;
-        margin-right: 40px;
-        margin-top: 19vh;
-    }
-    
-    .whish-state {
-        background-color: red;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 0;
-        left: 2rem;
-        color: aliceblue;
-        font-size: 12px;
-        font-weight: 700;
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+@media (min-width: 768px) and (max-width: 1030px) {
+  .whish-button {
+    font-size: 1.2rem;
+    margin-right: 20px;
+    margin-top: 31px; /* Ajuste o espaçamento para este tamanho de tela */
+  }
+
+  .whish-state {
+    width: 18px;
+    height: 18px;
+    left: 0.9rem;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1030px) and (max-width: 2138px) {
+  .whish-button {
+    font-size: 1.7rem;
+    margin-right: 25px;
+    margin-top: 64px;
+    margin-left: 0;
+  }
+
+  .whish-state {
+    width: 19px;
+    height: 18px;
+    right: 2rem;
+  }
 }
