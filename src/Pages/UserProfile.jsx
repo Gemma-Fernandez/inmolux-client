@@ -144,7 +144,7 @@ if(user){
           <div className='profile-drop'>
             <input type="text" value={newUserName} onChange={handleUserNameChange} className='input-profile-email-username'/>
             <button className='button-profile' onClick={handleUserNameEdit}>Enviar</button>
-            <button className='button-cancelar' onClick={() => setIsEditingUsername(false)}>Cancelar</button>
+            <button className='button-cancelar' onClick={() => setIsEditingUsername(false)}>Cancel</button>
           </div>
         ) : (
           <button className='button-profile' onClick={() => {
