@@ -49,7 +49,7 @@ function NavBar() {
                 <FaUserEdit className="icon-vivienda" />
               </Link>
             ) : (
-              <Link to="/user/profile" title="User Profile">
+              <Link to="/user/profile" title="User Profile" className="search-mobile">
                 <FaUserEdit className="icon-vivienda" />
               </Link>
             )}
@@ -61,7 +61,7 @@ function NavBar() {
               />
             </Link>
 
-            <Link to="/vivienda/search" title="Search">
+            <Link to="/vivienda/search" title="Search" className="search-mobile">
             <IoSearchSharp className="icon-vivienda"/>
             </Link>
             
