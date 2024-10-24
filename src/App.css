@@ -1,28 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
 
+/*.total {
+  background-color: #088da1;
+}*/
+
 #root {
-  width: 100%;
-  height: auto;
+  min-width: 100%;
+  height: 100vh;
   padding: 0;
   text-align: center;
   background-color: #ffffff;
-  margin: 1px;
-}
-
-body, html {
-  height: auto;
+ 
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .container-app {
-  min-height: 100%;
-  position: relative;
-  padding-bottom: 100px; 
+  height: 100vh;
+  min-width: 100vw;
 }
 
 
@@ -315,7 +313,7 @@ height: 20px;
     opacity: 0.9;
     z-index: -1;
     width: 100%;
-    height: 10%;
+    
     
     }
     .navbar-container-icons {

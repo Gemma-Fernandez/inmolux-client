@@ -251,7 +251,6 @@
 /*---------small---------*/
 @media (max-width: 768px) {
   .admin-profile-container {
-    position: fixed;
     padding: 0;
   }
 

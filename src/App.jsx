@@ -16,7 +16,8 @@ import EditForm from "./components/formulariosVivienda/EditForm"
 import ShowWishlist from "./Pages/ShowWishlist";
 import AddViviendaForm from "./components/formulariosVivienda/AddViviendaForm"
 import Search from "./Pages/Search";
-import Map from "./Pages/Map/Map"
+import Map from "./Pages/Map/Map";
+import Prueba from "./Pages/Prueba"
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <div className="container-app">
       <NavBar />
       <Routes>
+        <Route path={"/prueba"} element={<Prueba />} />
         <Route path={"/"} element={<Home />} />
         <Route path={"/login"} element={<Login />} />
         <Route path={"/signup"} element={<Signup />} />

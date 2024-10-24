@@ -25,12 +25,15 @@ function Footer() {
           <h4 className="footer-title">Contact us</h4>
           <a className="footer-small-content" href=""><MdOutlineEmail/> support@inmolux.com</a> <br/>
           <a className="footer-small-content" href=""><BiPhoneCall /> +34 688 999 898</a>
+
         </div>
       </div>
-      <div><p className="last-content-footer">© 2024 Copyright Inmo.Lux Inc.</p></div>
-      
+      <div className="last-content-footer">
+        <p >© 2024 Copyright Inmo.Lux Inc.</p>
+      </div>
     </div>
   );
 }
 
 export default Footer;
+
