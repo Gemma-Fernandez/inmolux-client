@@ -54,7 +54,7 @@ a:hover{
         align-items: center;
         width: 100vw;
         height: 70px;
-        position: fixed;
+        
         bottom: 0;
     }
     .footer-elements{
@@ -93,10 +93,11 @@ a:hover{
         justify-content: center;
         align-items: center;
         width: 100vw;
-        height: 14%;
+        height: 150px;
         position: fixed;
         bottom: 0;
         font-size: 14px;
+        z-index: 1;
     }
     .footer-elements{
      display: flex;

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
+
+.container-error img{
+width: 300px;
+margin: 20px;
+border-radius: 20px;
+box-shadow: 5px 5px 30px #1A6C7A;
+}
+.container-error h1{
+    margin: 30px 15px 10px 15px;
+    font-family: "Fjalla One", serif;
+}
+
+@media (min-width: 780px){
+    .container-error img{
+        width: 500px;
+        border-radius: 20px;
+    }
+    .container-error h1{
+        margin: 30px 30px 10px 30px;
+    }
+}

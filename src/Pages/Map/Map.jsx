@@ -31,7 +31,7 @@ function Map() {
 
   return (
     <div>
-      <div>
+      <div className="container-desc-map">
         <h2>Who are we?</h2>
         <p>
           Welcome to InmoLux, your reference portal for renting luxury homes. We
@@ -45,24 +45,20 @@ function Map() {
           environment, at InmoLux you will find the ideal place that fits your
           expectations and lifestyle. 
         </p>
-        <p>
-          At InmoLux, we not only rent properties, but we offer unparalleled
-          living experiences.
-        </p>
       </div>
 
       <div className="map-container">
         <h2>Find our homes:</h2>
         <MapContainer
           center={center}
-          zoom={5}
+          zoom={4}
           scrollWheelZoom={true}
           className="image-map"
-        >
+          >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+            />
 
           {viviendas.map((vivienda) => (
             <Marker key={vivienda._id} position={vivienda.coordinates}>
@@ -73,6 +69,10 @@ function Map() {
           ))}
         </MapContainer>
       </div>
+            <p className="eslogan">
+              At InmoLux, we not only rent properties, but we offer unparalleled
+              living experiences.
+            </p>
     </div>
   );
 }

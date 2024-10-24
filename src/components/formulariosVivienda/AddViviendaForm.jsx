@@ -7,6 +7,11 @@ import { useState } from "react";
 import service from "../../services/config.js";
 import "./Formularios.css";
 import axios from "axios";
+import { IoImageOutline } from "react-icons/io5";
+import { BiMap } from "react-icons/bi";
+import { RiMoneyEuroCircleLine } from "react-icons/ri";
+import { TbFileDescription } from "react-icons/tb";
+
 
 function AddViviendaForm() {
   const navigate = useNavigate();
@@ -89,6 +94,7 @@ function AddViviendaForm() {
         <h2 className="form-title-add">Add new apartment</h2>
       </div>
       <form onSubmit={handleSubmit} className="form-addvivienda">
+        <label>Name:</label>
         <input
           type="text"
           name="text"
@@ -97,6 +103,7 @@ function AddViviendaForm() {
           placeholder="name"
         />
         <br />
+        <label><BiMap />City:</label>
         <input
           type="text"
           name="city"
@@ -105,6 +112,7 @@ function AddViviendaForm() {
           placeholder="city"
         />
         <br />
+        <label><TbFileDescription />Description:</label>
         <input
           as="textarea"
           type="text"
@@ -114,6 +122,7 @@ function AddViviendaForm() {
           placeholder="description"
         />
         <br />
+        <label>Property type:</label>
         <input
           type="text"
           name="property_type"
@@ -122,6 +131,7 @@ function AddViviendaForm() {
           placeholder="Porperty type"
         />
         <br />
+        <label>Bathrooms:</label>
         <input
           type="text"
           name="bathrooms"
@@ -130,6 +140,7 @@ function AddViviendaForm() {
           placeholder="Bathrooms"
         />
         <br />
+        <label>Bedrooms:</label>
         <input
           type="text"
           name="bedrooms"
@@ -138,6 +149,7 @@ function AddViviendaForm() {
           placeholder="bedrooms"
         />
         <br />
+        <label><RiMoneyEuroCircleLine />Price:</label>
         <input
           type="number"
           name="price"
@@ -146,6 +158,7 @@ function AddViviendaForm() {
           placeholder="Price"
         />
         <br />
+        <label><IoImageOutline />Images:</label>
         <input
           type="file"
           multiple

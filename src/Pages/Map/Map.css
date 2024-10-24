@@ -1,7 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
 
 .leaflet-container {
-    height: 250px; /* example */
+    height: 200px; /* example */
     width: 300px; /* example */
     box-shadow: 1px 10px 20px rgb(129, 127, 127);
     border:1px solid  #fdfdfd;
@@ -10,8 +10,57 @@
   .map-container{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 20px;
-   
-    
+  align-items: center;   
   }
+  .container-desc-map{
+    text-align: justify;
+    margin:18px 18px 15px 18px;
+    font-size: 12px;
+  }
+  .container-desc-map h2{
+      font-family: "Fjalla One", serif;
+      text-align: center;
+  }
+  .map-container h2{
+    font-family: "Fjalla One", serif;
+      text-align: center;
+  }
+  .eslogan{
+    text-align: justify;
+    margin:30px 18px 15px 18px;
+    font-size: 12px;
+    text-align: center;
+  }
+  @media (min-width: 780px){
+    .leaflet-container {
+        height: 250px; /* example */
+        width: 350px; /* example */
+        box-shadow: 1px 10px 20px rgb(129, 127, 127);
+        border:1px solid  #fdfdfd;
+  }
+  .map-container{
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 30px;   
+    }
+}
+@media (min-width: 780px){
+    .container-desc-map{
+        
+        margin:18px 30px 15px 30px;
+        font-size: 15px;
+      }
+      .eslogan{
+        font-size: 15px;
+      }
+}
+@media (min-width: 780px){
+    .container-desc-map{
+        margin:20px 65px 15px 65px;
+        font-size: 17px;
+      }
+      .eslogan{
+        font-size: 17px;
+      }
+}

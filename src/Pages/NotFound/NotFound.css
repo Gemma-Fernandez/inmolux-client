@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
+
+.container-notfound img{
+ width: 300px;
+ border-radius: 20px;
+ margin:10px;
+ box-shadow: 5px 5px 30px #1A6C7A;
+}
+.container-notfound h1{
+    margin-top: 60px;
+    font-family: "Fjalla One", serif;
+}
+.container-notfound h2{
+    font-family: "Fjalla One", serif;
+    margin-top: 40px;
+    color:black;
+    text-decoration: underline;
+}
+.container-notfound h2:hover{
+    color:#1A6C7A;
+}
+@media (min-width: 780px){
+    .container-notfound img{
+        width: 400px; 
+    }
+}

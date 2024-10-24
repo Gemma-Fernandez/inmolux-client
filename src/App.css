@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
 
 #root {
   width: 100%;
@@ -9,7 +10,7 @@
 }
 
 body, html {
-  height: 100%;
+  height: auto;
 }
 
 * {
@@ -26,38 +27,129 @@ body, html {
 
 
 
-/*
-/*--------------MAPA---------------*/
+/*------MAPA HOME-------*/
 
-.leaflet-container {
-  height: 230px; /* example */
-  width: 330px; /* example */
-  border-radius: 10px;
-  box-shadow: 1px 10px 20px rgb(129, 127, 127);
-  margin: auto;
-  border:1px solid  #fdfdfd;
-  z-index: 1; 
-  position: relative;
+.icon-map{
+  width: 100px; 
 }
-.map-container{
-  right: 13px;
-  margin: 6.7rem auto;
-  position: relative;
-}
-.home-title{
-  position: absolute;
-  z-index: 2; 
-  text-align: center;
-  color: rgb(45, 46, 46);
-  text-shadow: 2px 1px 10px #f0f9f6;
-  letter-spacing: 2px;
-  top: 10px; 
-  left: 35%; 
-  transform: translateX(-50%); 
+.title-mapa{
+  margin-top: 28%;
   font-size: 15px;
+  font-family: "Fjalla One", serif;
+  letter-spacing: 2px;
 }
+.choose-house{
+  font-size: 15px;
+  font-family: "Fjalla One", serif;
+  letter-spacing: 2px;
+}
+.icon-map:hover{
+  width: 105px;
+}
+
+@media (min-width: 400px){
+  .title-mapa{
+    margin-top: 35%;  
+  }
+}
+@media (min-width: 580px){
+  .title-mapa{
+    margin-top: 160%; 
+    width:130px ;
+    margin-left: 30px;
+  }
+  .choose-house{
+    width:140px ;
+    margin-left: 30px;
+    margin-top: 150%; 
+  }
+  .icon-map{
+    width: 100px;
+  }
+  .container-mapa-home{
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+}
+  @media (min-width: 680px){
+    .title-mapa{
+      margin-top: 200%; 
+    }
+    .choose-house{
+      width:185px ;
+      
+    }
+  }
+    @media (min-width: 790px){
+      .title-mapa{
+        margin-top: 245%; 
+      }
+      .choose-house{
+        width:230px ;       
+      }
+}
+@media (min-width: 920px){
+  .title-mapa{
+    margin-top: 275%; 
+  }
+  .choose-house{
+    width:265px ;       
+  }
+}
+@media (min-width: 1320px){
+  .title-mapa{
+    margin-top: 290%; 
+    font-size: 25px;
+    width: 150px
+  }
+  .choose-house{
+    width:310px ;  
+    font-size: 25px;
+         
+  }
+}
+@media (min-width: 1450px){
+  .title-mapa{
+    margin-top: 350%; 
+    width: 150px
+  }
+  .choose-house{
+    width:390px ; 
+         
+  }
+  .icon-map{
+    width: 130px; 
+  }
+}
+@media (min-width: 1690px){
+  .title-mapa{
+    margin-top: 335%; 
+    width: 180px;
+  }
+  .choose-house{
+    width:435px ; 
+    
+         
+  }
+  
+}
+@media (min-width: 1810px){
+  .title-mapa{
+    margin-top: 390%; 
+    width: 180px
+  }
+  .choose-house{
+    width:515px ; 
+         
+  }
+  
+}
+
+
 
 /*------VIDEO-------*/
+
 .video-container {
   position: absolute;
   top: 5rem;
@@ -66,7 +158,6 @@ body, html {
   height: auto; 
   overflow: hidden;
   opacity: 0.9;
-  z-index: 0; 
   box-shadow: 1px 10px 20px rgb(129, 127, 127);
 }
 
@@ -80,7 +171,7 @@ body, html {
   position: relative;
   z-index: 1; 
   text-align: center;
-  color: rgba(252, 251, 251, 0.564);
+  color: rgba(252, 251, 251, 0.635);
   text-shadow: 2px 1px 10px #000000;
   letter-spacing: 2px;
   margin-top: 60px; 
@@ -276,7 +367,8 @@ height: 20px;
   font-size: 35px;
   color: #088da1;
   font-weight: lighter;
-  font-style: italic;
+  font-family: "Fjalla One", serif;
+  letter-spacing: 2px;
   text-shadow: 2px 1px 10px  #555858;
   z-index: 1;
   position: relative;
@@ -285,13 +377,13 @@ height: 20px;
 .description-vivienda {
   display: flex;
   align-items: center;
-  margin: auto;
+  margin-top: 5px;
   justify-content: center;
   font-size: 18px;
-  color: rgb(245, 243, 240);
+  color: #1A6D7A;
   font-weight: lighter;
   font-style: italic;
-  text-shadow: 2px 1px 10px #021c20;
+  text-shadow: 2px 1px 10px #021c2069;
   position: relative;
   text-decoration: none!important;
 }
@@ -434,10 +526,11 @@ height: 20px;
   justify-content: center;
   padding: 10px;
   font-size: 28px;
-  color: rgb(245, 243, 240);
+  color: #1A6D7A;
   font-weight: lighter;
-  font-style: italic;
-  text-shadow: 4px 1px 20px  #088da1;
+  font-family: "Fjalla One", serif;
+  letter-spacing: 2px;
+  text-shadow: 4px 1px 20px  #088da1bf;
   z-index: 1;
   position: relative;
   margin-top: 20px;
@@ -513,7 +606,7 @@ cursor: pointer;
   justify-content: center;
   padding: 10px;
   font-size: 20px;
-  color: rgb(245, 243, 240);
+  color: #1A6D7A;
   font-weight: lighter;
   font-style: italic;
   text-shadow: 2px 1px 10px  #088da1;
@@ -528,7 +621,7 @@ cursor: pointer;
   justify-content: center;
   padding: 10px;
   font-size: 16px;
-  color: rgb(245, 243, 240);
+  color: rgb(0, 0, 0);
   font-weight: lighter;
   font-style: italic;
   z-index: 1;
@@ -588,9 +681,10 @@ cursor: pointer;
 
 .search-title {
   font-size: 30px;
-  color: rgb(245, 243, 240);
+  color: #196D7A;
   font-weight: lighter;
-  font-style: italic;
+  font-family: "Fjalla One", serif;
+  letter-spacing: 2px;
   text-shadow: 2px 1px 10px  #088da1;
   margin-top: 20px;
 }
@@ -612,17 +706,18 @@ cursor: pointer;
   margin: auto;
   justify-content: center;
   font-size: 1.1rem;
-  color: rgb(245, 243, 240);
+  color: rgb(5, 5, 5);
   font-weight: lighter;
   font-style: italic;
   text-shadow: 2px 1px 10px  #088da1;
   padding-right: 10px;
   letter-spacing: 5px;
   margin-bottom: 10px;
+  
 }
 
 .search-input{
-  background-color: rgba(157, 217, 221, 0.8);
+  background-color: rgba(255, 255, 255, 0.854);
   cursor: pointer;
   color: rgb(0, 0, 0); 
   border: none; 
@@ -640,7 +735,7 @@ cursor: pointer;
   margin: auto;
   justify-content: center;
   font-size: 16px;
-  color: rgb(245, 243, 240);
+  color: rgb(0, 0, 0);
   font-weight: lighter;
   font-style: italic;
   text-shadow: 2px 1px 10px  #088da1;
@@ -648,8 +743,9 @@ cursor: pointer;
   letter-spacing: 5px;
   margin-bottom: 10px;
   border-radius: 20px;
-  background-color:#555557;
+  background-color:#fbfbff;
   box-shadow: 0 2px 20px  rgba(7, 161, 172, 0.5);
+  border: 2px solid black;
 }
 
 .search-option{
@@ -657,6 +753,7 @@ font-size: 10px;
 }
 
 .button-search{
+  
   background: linear-gradient(90deg, #055461, #2b2b2c);
   border: none;
   border-radius: 5px;
@@ -681,4 +778,45 @@ font-size: 10px;
 .search-input{
   position: relative;
 }
+}
+@media (min-width: 768px){
+  .search-container{
+    padding: 1.5em 2.5rem; 
+    padding: 35px;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  .search-title{
+    font-size: 20px;
+  }
+  .search-label{
+    font-size: 12px;
+  }
+  .search-input{
+    font-size: 14px;
+  }
+  .button-search{
+    margin-top: 6px
+  }
+}
+@media (min-width: 124px){
+  .search-title{
+    font-size: 25px;
+  }
+  .search-label{
+    font-size: 17px;
+  }
+  .search-container{
+    padding: 1.5em 2.5rem; 
+    padding: 40px;
+    
+    margin-top:15px;
+  }
+  .search-input{
+    font-size: 14px;
+    width: 100%;
+  }
+  .button-search{
+    margin-top: 10px
+  }
 }

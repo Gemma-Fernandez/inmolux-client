@@ -67,7 +67,7 @@ function Search() {
                         value={minPrice || ''}
                         onChange={(e) => setMinPrice(e.target.value)}
                         placeholder={minPricePlaceholder} />
-                
+                <br/>
                 <label className='search-label'>
                     Precio Máximo</label>
                     <input
@@ -76,7 +76,7 @@ function Search() {
                         value={maxPrice}
                         onChange={(e) => setMaxPrice(e.target.value)}
                         placeholder={maxPricePlaceholder} />
-               
+               <br/>
             {/*city*/}
                 <label className='search-label'>
                     City</label>
@@ -88,6 +88,7 @@ function Search() {
                         placeholder='City' />
                 
             {/*bathrooms*/}
+            <br/>
                 <label className='search-label'>
                     Baños</label>
                     <input
@@ -96,7 +97,7 @@ function Search() {
                         value={bathrooms}
                         onChange={(e) => setBathrooms(e.target.value)}
                         placeholder='Baños' />
-               
+               <br/>
             {/*bedrooms*/}
            
                 <label className='search-label'>
@@ -107,7 +108,7 @@ function Search() {
                         value={bedrooms}
                         onChange={(e) => setBedrooms(e.target.value)}
                         placeholder='Dormitorios' />
-                
+                <br/>
             {/*Property*/}
                 <label className='search-label'>
                     Tipo de propiedad </label>
@@ -120,7 +121,7 @@ function Search() {
                         ))}
                     </select>
                 
-
+                    <br/>
                 <button onClick={handleFilter} className='button-search'>Buscar</button>
         </div>
         
