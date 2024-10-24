@@ -4,6 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
+import markerIconPng from "leaflet/dist/images/marker-icon.png"
+import {Icon} from 'leaflet'
 
 function Map() {
   const [viviendas, setViviendas] = useState([]);
@@ -61,7 +63,7 @@ function Map() {
             />
 
           {viviendas.map((vivienda) => (
-            <Marker key={vivienda._id} position={vivienda.coordinates}>
+            <Marker key={vivienda._id} position={vivienda.coordinates} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})}>
               <Popup>
                 <b>{vivienda.name}</b>
               </Popup>

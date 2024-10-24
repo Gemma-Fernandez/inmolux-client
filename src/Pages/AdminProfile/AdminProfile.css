@@ -1,6 +1,6 @@
 .admin-profile-container {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +8,7 @@
   overflow: hidden;
   padding: 0;
   gap: 1rem;
+  position: relative;
 }
 
 .admin-profile-container::before {
