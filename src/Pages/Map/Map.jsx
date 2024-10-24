@@ -63,7 +63,7 @@ function Map() {
             />
 
           {viviendas.map((vivienda) => (
-            <Marker key={vivienda._id} position={vivienda.coordinates} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})}>
+            <Marker key={vivienda._id} position={vivienda.coordinates} icon={new Icon({iconUrl: markerIconPng, iconSize: [15, 25], iconAnchor: [10, 31]})}>
               <Popup>
                 <b>{vivienda.name}</b>
               </Popup>

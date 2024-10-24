@@ -16,7 +16,7 @@ function Footer() {
           <a className="footer-small-content" href=""><FaHouseFlag /> Our Story</a>
         </div>
         <div>
-          <h4 className="footer-title">Develop by:</h4>
+          <h4 className="footer-title">Developed by:</h4>
           <a className="footer-small-content" href="https://github.com/Malu888"> <FaGithub /> Malú Dietrich</a>
           <br />
           <a className="footer-small-content" href="https://github.com/Gemma-Fernandez"> <FaGithub /> Gemma Fernandez</a>

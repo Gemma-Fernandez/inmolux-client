@@ -188,9 +188,9 @@ function AdminProfile() {
           {solicitudes.map((eachElement, i) => (
             <div key={i} className="section-requests">
               <div className='section-boxs'>
-                <p className='section-name'> Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city}</p> {/* falta name y city*/}
-                <p className='section-name'>User: {eachElement.user.username} - {eachElement.user.email}</p>    {/* falta username y email*/}
-                <p className='section-name'>Message: {eachElement.message}</p>
+                <p className='section-name'><strong> Apartment: </strong> {eachElement.vivienda.name} - {eachElement.vivienda.city}</p> {/* falta name y city*/}
+                <p className='section-name'><strong>User: </strong>{eachElement.user.username} - {eachElement.user.email}</p>    {/* falta username y email*/}
+                <p className='section-name'> <strong>Message: </strong>{eachElement.message}</p>
                 <button onClick={() => removeSolicitud(eachElement._id)} className="delete-icon-request "><TiDelete /></button>
               </div>
             </div>

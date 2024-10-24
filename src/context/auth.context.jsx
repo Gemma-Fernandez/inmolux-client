@@ -47,7 +47,7 @@ function AuthWrapper({children}) {
     setAdmin
   };
   if (isValidatingToken) {
-    return <h3>...validating user</h3>;
+    return <div className="Validating-user"></div>;
   }
 
   return (

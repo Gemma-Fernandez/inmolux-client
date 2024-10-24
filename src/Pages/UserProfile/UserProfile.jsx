@@ -176,8 +176,8 @@ function UserProfile() {
           {showSoli.map((eachElement) => (
             <div key={eachElement._id} className='section-request'>
               <div className='section-box'>
-                <p className='section-name'>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city}</p>
-                <p className='section-name'>Message: {eachElement.message}</p>
+                <p className='section-name'><strong>Apartment: </strong> {eachElement.vivienda.name} - {eachElement.vivienda.city}</p>
+                <p className='section-name'><strong>Message: </strong>{eachElement.message}</p>
               </div>
             </div>
           ))}
