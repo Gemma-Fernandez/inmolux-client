@@ -1,0 +1,118 @@
+.login-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../images/background-login0.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.card{
+   width: 75%;
+    background: transparent;
+    border: 2px solid  #fcfdfd;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 0 10px rgba(251, 251, 252, 0.4);
+    
+}
+
+.login-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:  #ffffff;
+    font-weight: lighter;
+    font-style: italic;
+    text-shadow: 2px 1px 10px #fffffff1;
+    margin: 10px;
+    font-family: "Playfair Display SC", serif;
+}
+
+.login-label {
+    font-size: 16px;
+    color:  #ffffff;
+    font-style: italic;
+    font-family: "Playfair Display SC", serif;
+    margin: 5px;
+}
+
+.login-input {
+    width: 90%;
+    height: 35px;
+    background: rgba(252, 255, 255, 0.623);;
+    border: none;
+    border: 2px solid  #fcfdfd;
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    box-sizing: border-box;
+    background-position: 5px center;
+    text-align: center;
+}
+
+.login-button {
+    background:  #197482;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: lighter;
+    font-style: italic;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 246, 255, 0.6), 0 0 10px rgba(251, 251, 252, 0.4);
+    position: relative;
+    overflow: hidden;
+    min-width: 130px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.flip-card {
+    background: black;
+    opacity: 0.8;
+    border-radius: 20px;
+    width: 100%;
+   
+}
+
+
+.flip-card-back {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(360deg);
+    padding: 20px;
+    perspective: 1000px;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .login-container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../../images/background-login0.avif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 80%;
+    }
+}

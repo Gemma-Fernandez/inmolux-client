@@ -10,7 +10,7 @@ import { Link, useParams } from "react-router-dom";
 
 function ShowWishlist() {
     const params = useParams()
-    const { removeWish, wishlist, getWishlist, setWishlist } = useContext(WishlistContext);
+    const { removeWish, wishlist, setWishlist } = useContext(WishlistContext);
     const { user, isLoggedIn } = useContext(AuthContext)
     const [isLoading, setIsLoading] = useState(true);
 

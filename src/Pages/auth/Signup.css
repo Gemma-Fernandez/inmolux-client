@@ -1,14 +1,26 @@
 /*Signup*/
 
+.signup-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color: #0d6c79;
+  margin-bottom: 50px;
+}
+
 .title-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
     width: 100%;
-    padding: 1.5em 2.5rem;
+    height: 30vw;
     border-bottom: 1px solid grey; 
     background: url('../../images/salon.jpg');
     background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 40px;
   opacity: 0.7;
   z-index: -1;
   }
@@ -42,14 +54,35 @@
   
   
   .form-signup {
+    width: 90%;
+    background-color: #0d6d797e;
+    border: 2px solid  #fcfdfd;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    margin: auto;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    position: relative;
-    margin: 20px auto;
-    max-width: 400px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .signup-inputs{
+    width: 80%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    font-size: 16px;
+    color: whitesmoke;
+    padding: 1px;
+    justify-content: center;
+    box-sizing: border-box;
+    background-position: 5px center
   }
   

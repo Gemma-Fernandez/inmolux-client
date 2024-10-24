@@ -97,6 +97,7 @@ a:hover{
         position: fixed;
         bottom: 0;
         font-size: 14px;
+        z-index: 1; 
     }
     .footer-elements{
      display: flex;

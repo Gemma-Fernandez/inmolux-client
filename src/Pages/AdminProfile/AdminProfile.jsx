@@ -1,16 +1,19 @@
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
-
+import { IoIosCloudDone } from "react-icons/io";
 import { useState, useEffect } from "react";
 import service from "../../services/config.js";
 import { DataContext } from "../../context/Data.context";
+import { TbHomePlus } from "react-icons/tb";
+import { TiDelete } from "react-icons/ti";
+import './AdminProfile.css'
 
 
 function AdminProfile() {
-const {removeSolicitud, solicitudes, setSolicitudes} = useContext(DataContext)
-  
-  
+  const { removeSolicitud, solicitudes, setSolicitudes } = useContext(DataContext)
+
+
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState("");
   const [newEmail, setNewEmail] = useState("");
@@ -18,9 +21,9 @@ const {removeSolicitud, solicitudes, setSolicitudes} = useContext(DataContext)
   const [isEditingUsername, setIsEditingUsername] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [newUserName, setNewUserName] = useState("")
- 
-  
-  
+
+
+
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -30,7 +33,7 @@ const {removeSolicitud, solicitudes, setSolicitudes} = useContext(DataContext)
             Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
-        
+
         setUserData(response.data.user);
         setNewEmail(response.data.user.email || "")
         setNewUserName(response.data.user.username || "")
@@ -39,14 +42,14 @@ const {removeSolicitud, solicitudes, setSolicitudes} = useContext(DataContext)
         setError("Error al buscar los datos del usuario");
       }
     };
-    const fetchSolicitudes= async()=>{
+    const fetchSolicitudes = async () => {
       try {
-        const response=await service.get("/solicitud", {
+        const response = await service.get("/solicitud", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           }
         })
-        
+
         setSolicitudes(response.data)
       } catch (error) {
         console.log(error)
@@ -123,69 +126,79 @@ const {removeSolicitud, solicitudes, setSolicitudes} = useContext(DataContext)
     }
   };
 
-  
 
 
-  
+
+
 
   return (
-    <div>
-      <h1>Admin profile:</h1>
-      <div>
-        <h2>Welcome, {userData.username}</h2>
-        <>
-        {isEditingUsername ? (
-          <div>
-            <input type="text" value={newUserName} onChange={handleUserNameChange} />
-            <button onClick={handleUserNameEdit}>Send</button>
-            <button onClick={() => setIsEditingUsername(false)}>Cancelar</button>
-          </div>
-        ) : (
-          <button onClick={() => {
-            setNewUserName(userData.newUserName);
-            setIsEditingUsername(true);
-          }}>Editar Username</button>
-        )}
-        {errorMessage && <p>{errorMessage}</p>}
-      </>
-        <br/>
+    <div className="admin-profile-container">
+      <div className="admin-image-container">
+        <h1 className="admin-profile-title">Welcome {userData.username}</h1>
         <img
           src={userData.profile_image}
-          style={{ width: "200px", borderRadius: "50%" }}
-          alt="Profile"
-        />
-        <p>Email: {userData.email}</p>
-        {isEditing ? (
-          <div>
-            <input type="email" value={newEmail} onChange={handleEmailChange} />
-            <button onClick={handleEmailEdit}>Send</button>
-            <button onClick={() => setIsEditing(false)}>Cancelar</button>
-          </div>
-        ) : (
-          <button onClick={() => setIsEditing(true)}>Editar e-mail</button>
-        )}
-        {errorMessage && <p>{errorMessage}</p>}
+          className="admin-img"
+          alt="Profile" />
       </div>
-      <p>Role: {userData.role}</p>
-      <div>
+
+
+      <div className="admin-username-email-edit">
+        <div className="admin-username">
+          <p className='admin-profile-name'>{userData.username}</p>
+          <>
+            {isEditingUsername ? (
+              <div className='admin-drop-menu'>
+                <input type="text" value={newUserName} onChange={handleUserNameChange} className='input-admin-email-username' />
+                <button className="button-admin-send" onClick={handleUserNameEdit}>Send</button>
+                <button className="button-admin-cancel" onClick={() => setIsEditingUsername(false)}>Cancel</button>
+              </div>
+            ) : (
+              <button className="button-admin-send" onClick={() => {
+                setNewUserName(userData.username);
+                setIsEditingUsername(true);
+              }}>Edit your username</button>
+            )}
+            {errorMessage && <p>{errorMessage}</p>}
+          </>
+        </div>
+        <div className='admin-email'>
+          <p className='admin-profile-email'>{userData.email}</p>
+          {isEditing ? (
+            <div className='admin-drop-menu'>
+              <input type="email" value={newEmail} onChange={handleEmailChange} className='input-admin-email-username' />
+              <button className="button-admin-send" onClick={handleEmailEdit}>Send</button>
+              <button className="button-admin-cancel" onClick={() => setIsEditing(false)}>Cancel</button>
+            </div>
+          ) : (
+            <button className="button-admin-send" onClick={() => setIsEditing(true)}>Edit your email</button>
+          )}
+          {errorMessage && <p>{errorMessage}</p>}
+        </div>
+      </div>
+
+      <div className="add-vivienda-container">
         <Link to={"/vivienda/addVivienda"}>
-        <button>Add new apartment</button>
+          <button className="button-add-vivienda">Add new apartment <TbHomePlus className="admin-icon-add" /></button>
         </Link>
       </div>
-      <div>
-      <h2>User Request</h2>
-      {solicitudes.map((eachElement, i)=>(
-        <li key={i}>
-          <h3>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city} </h3> {/* falta name y city*/}
-          <p>User: {eachElement.user.username} - {eachElement.user.email}</p>    {/* falta username y email*/}
-          <p>Message: {eachElement.message}</p>
-          <button onClick={() => removeSolicitud(eachElement._id)}>Delete</button>
-        </li>
-      )
-      )}
+
+      <div className='admin-requests-container'>
+        <h2 className="title-resquests">User Request <IoIosCloudDone className='icon-requests-users' /></h2>
+        <div className="scrollable-menu-resquest">
+          {solicitudes.map((eachElement, i) => (
+            <div key={i} className="section-requests">
+              <div className='section-boxs'>
+                <p className='section-name'> Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city}</p> {/* falta name y city*/}
+                <p className='section-name'>User: {eachElement.user.username} - {eachElement.user.email}</p>    {/* falta username y email*/}
+                <p className='section-name'>Message: {eachElement.message}</p>
+                <button onClick={() => removeSolicitud(eachElement._id)} className="delete-icon-request "><TiDelete /></button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default AdminProfile;

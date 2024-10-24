@@ -10,28 +10,28 @@ import './UserProfile.css'
 
 
 function UserProfile() {
-  const {showSoli, setShowSoli, showSolicitudes} = useContext(DataContext)
-  const {user } = useContext(AuthContext)
+  const { showSoli, setShowSoli, showSolicitudes } = useContext(DataContext)
+  const { user } = useContext(AuthContext)
   const [userData, setUserData] = useState(null)
   const [error, setError] = useState("");
   const [newEmail, setNewEmail] = useState("");
   const [isEditing, setIsEditing] = useState(false)
   const [isEditingUsername, setIsEditingUsername] = useState(false);
   const [errorMessage, setErrorMessage] = useState("")
-  const [newUserName, setNewUserName] = useState("") 
-  
- 
+  const [newUserName, setNewUserName] = useState("")
+
+
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const response = await service.get("/user/profile", {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("authToken")}`, 
+            Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
-        
-        setUserData(response.data.user); 
+
+        setUserData(response.data.user);
         setNewEmail(response.data.user.email || "")
         setNewUserName(response.data.user.username || "")
       } catch (err) {
@@ -39,21 +39,21 @@ function UserProfile() {
         setError("Error al buscar los datos del usuario");
       }
     };
-console.log(user)
+    console.log(user)
 
 
-fetchUserData()
+    fetchUserData()
 
 
-if(user){
-  
-  showSolicitudes()
+    if (user) {
 
-}
-}, [user, setShowSoli]);
+      showSolicitudes()
+
+    }
+  }, [user, setShowSoli]);
 
 
-  
+
   if (error) {
     return <div>{error}</div>;
   }
@@ -121,68 +121,68 @@ if(user){
     }
   };
 
-  
 
-  
+
+
 
   return (
     <div className='profile-container'>
       <div className='profile-image'>
-      <h1 className='profile-title'>{userData.username} Profile</h1>
+        <h1 className='profile-title'>{userData.username} Profile</h1>
         <img
-        className='image'
+          className='image'
           src={userData.profile_image}
           alt="Profile"
         />
-        </div>
+      </div>
 
 
       <div className='profile-name-email-edit'>
         <div className='profile-name'>
-        <p className='profile-name'>{userData.username}</p>
-        <>
-        {isEditingUsername ? (
-          <div className='profile-drop'>
-            <input type="text" value={newUserName} onChange={handleUserNameChange} className='input-profile-email-username'/>
-            <button className='button-profile' onClick={handleUserNameEdit}>Enviar</button>
-            <button className='button-cancelar' onClick={() => setIsEditingUsername(false)}>Cancel</button>
-          </div>
-        ) : (
-          <button className='button-profile' onClick={() => {
-            setNewUserName(userData.username);
-            setIsEditingUsername(true);
-          }}>Edit your username</button>
-        )}
-        {errorMessage && <p>{errorMessage}</p>}
-      </>
-      </div>
-      <div className='profile-email'>
-      <p className='profile-email'>{userData.email}</p>
-        {isEditing ? (
-          <div className='profile-drop'>
-            <input type="email" value={newEmail} onChange={handleEmailChange} className='input-profile-email-username'/>
-            <button className='button-profile' onClick={handleEmailEdit}>Enviar</button>
-            <button className='button-cancelar'onClick={() => setIsEditing(false)}>Cancel</button>
-          </div>
-        ) : (
-          <button className='button-profile' onClick={() => setIsEditing(true)}>Edit your email</button>
-        )}
-        {errorMessage && <p>{errorMessage}</p>}
+          <p className='profile-name'>{userData.username}</p>
+          <>
+            {isEditingUsername ? (
+              <div className='profile-drop'>
+                <input type="text" value={newUserName} onChange={handleUserNameChange} className='input-profile-email-username' />
+                <button className='button-profile' onClick={handleUserNameEdit}>Send</button>
+                <button className='button-cancelar' onClick={() => setIsEditingUsername(false)}>Cancel</button>
+              </div>
+            ) : (
+              <button className='button-profile' onClick={() => {
+                setNewUserName(userData.username);
+                setIsEditingUsername(true);
+              }}>Edit your username</button>
+            )}
+            {errorMessage && <p>{errorMessage}</p>}
+          </>
+        </div>
+        <div className='profile-email'>
+          <p className='profile-email'>{userData.email}</p>
+          {isEditing ? (
+            <div className='profile-drop'>
+              <input type="email" value={newEmail} onChange={handleEmailChange} className='input-profile-email-username' />
+              <button className='button-profile' onClick={handleEmailEdit}>Send</button>
+              <button className='button-cancelar' onClick={() => setIsEditing(false)}>Cancel</button>
+            </div>
+          ) : (
+            <button className='button-profile' onClick={() => setIsEditing(true)}>Edit your email</button>
+          )}
+          {errorMessage && <p>{errorMessage}</p>}
         </div>
       </div>
       <div className='user-requests-container'>
-      <h4 className='title-profile'>My Requests <IoIosCloudDone className='icon-requests'/></h4>
-      <div className='scrollable-menu'>
-        {showSoli.map((eachElement) => (
-          <div key={eachElement._id} className='section-request'>
-            <div className='section-box'>
-              <p className='section-name'>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city}</p>
-              <p className='section-name'>Message: {eachElement.message}</p>
+        <h4 className='title-profile'>My Requests <IoIosCloudDone className='icon-requests' /></h4>
+        <div className='scrollable-menu'>
+          {showSoli.map((eachElement) => (
+            <div key={eachElement._id} className='section-request'>
+              <div className='section-box'>
+                <p className='section-name'>Apartment: {eachElement.vivienda.name} - {eachElement.vivienda.city}</p>
+                <p className='section-name'>Message: {eachElement.message}</p>
               </div>
             </div>
-        ))}
+          ))}
         </div>
-    </div>
+      </div>
     </div>
   )
 }

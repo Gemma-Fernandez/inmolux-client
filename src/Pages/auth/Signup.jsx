@@ -88,15 +88,15 @@ function Signup() {
         
         <br/>
         <label><FaRegUserCircle /> Username:</label>
-        <input type="text" name="username" value={username} onChange={handleUsernameChange}/>
+        <input className='signup-inputs' type="text" name="username" value={username} onChange={handleUsernameChange}/>
         <br/>
         <label><AiTwotoneMail /> Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmailChange}/>
+        <input className='signup-inputs' type="email" name="email" value={email} onChange={handleEmailChange}/>
         <br/>
         <label> <RiLockPasswordLine /> Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePasswordChange}  title="Su contraseña debe contener al menos una letra mayúscula y una minúscula y un número no debe exceder los 16 caracteres." />
+        <input className='signup-inputs' type="password" name="password" value={password} onChange={handlePasswordChange}  title="Su contraseña debe contener al menos una letra mayúscula y una minúscula y un número no debe exceder los 16 caracteres." />
         <br/>
-        <button type="submit" title='Haga clic para enviar'> Signup</button>
+        <button className="login-button" type="submit" title='Haga clic para enviar'> Signup</button>
         {errorMessage && <p>{errorMessage}</p>}
       </form>
 
