@@ -8,6 +8,8 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { IoImageOutline } from "react-icons/io5";
 import './Signup.css'
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 function Signup() {
   const navigate= useNavigate()
@@ -73,34 +75,38 @@ function Signup() {
   
 
   return (
-    <div className='signup-container'>
-     <div className='title-container'><h2 className='form-title-signup'>Be part of InmoLux</h2></div>
+    <>
+     <div className='title-container'><h2 className='title-signup'>Be part of InmoLux</h2></div>
+     <div className='signup-container'>
       <form onSubmit={handleSignup} className='form-signup'>
-        <label><IoImageOutline /> Image Profile:</label>
+        <label className="signup-label"><IoImageOutline /> Image Profile:</label>
         <br/>
-        <input type="file"
+        <input 
+        className='img-input'
+        type="file"
         name="image"
         onChange={handleFileUpload}
         disabled={isUploading}
         />
-        {imageUrl ? (<div><img src={imageUrl} alt="img" width={200} /></div>) : null}
-        {isUploading ? <h3>... uploading image</h3> : null}
+        {imageUrl ? (<div><img className='img-preview-signup' src={imageUrl} alt="img" width={200} /></div>) : null}
+        {isUploading ? <h3><ClipLoader /></h3> : null}
         
         <br/>
-        <label><FaRegUserCircle /> Username:</label>
+        <label className="signup-label"><FaRegUserCircle /> Username:</label>
         <input className='signup-inputs' type="text" name="username" value={username} onChange={handleUsernameChange}/>
         <br/>
-        <label><AiTwotoneMail /> Email:</label>
+        <label className="signup-label"><AiTwotoneMail /> Email:</label>
         <input className='signup-inputs' type="email" name="email" value={email} onChange={handleEmailChange}/>
         <br/>
-        <label> <RiLockPasswordLine /> Password:</label>
+        <label className="signup-label"> <RiLockPasswordLine /> Password:</label>
         <input className='signup-inputs' type="password" name="password" value={password} onChange={handlePasswordChange}  title="Su contraseña debe contener al menos una letra mayúscula y una minúscula y un número no debe exceder los 16 caracteres." />
         <br/>
-        <button className="login-button" type="submit" title='Haga clic para enviar'> Signup</button>
+        <button className="signup-button" type="submit" title='Haga clic para enviar'> Signup</button>
         {errorMessage && <p>{errorMessage}</p>}
       </form>
 
     </div>
+    </>
   )
 }
 

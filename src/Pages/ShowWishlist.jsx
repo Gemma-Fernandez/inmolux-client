@@ -6,6 +6,8 @@ import service from "../services/config";
 import { PiHeartDuotone } from "react-icons/pi";
 import { TiDelete } from "react-icons/ti";
 import { Link, useParams } from "react-router-dom";
+import ClockLoader from "react-spinners/ClockLoader";
+
 
 
 function ShowWishlist() {
@@ -21,7 +23,7 @@ function ShowWishlist() {
                 if (isLoggedIn && user) {
                     const response = await service.get("/user/wishlist/vivienda")
                     setWishlist(response.data)
-                    console.log(response.data)
+                    
                 }
             } catch (error) {
                 console.log(error)
@@ -36,7 +38,7 @@ function ShowWishlist() {
 
 
     if (isLoading) {
-        return <p>Loading</p>;
+        return <div className="spinner-container"><p className="spinner"><ClockLoader/></p></div>;
     }
 
 
@@ -45,7 +47,7 @@ function ShowWishlist() {
         <div>
             <h1 className='wishlist-title'> Whislist <PiHeartDuotone className='icon-wish' /></h1>
             {wishlist.length === 0 ? (
-                <p>wishlist vacía.</p>
+                <p>La wishlist esta vacía.</p>
             ) : (
                 <div className='wish-container'>
                     {wishlist.map((eachVivienda, i) => (

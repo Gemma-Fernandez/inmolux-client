@@ -63,6 +63,16 @@
 .button-send:hover{
     background-color: #A2D0D3;
 }
+.spinner{
+    margin:150px;
+   }
+   .spinner-container{
+     height: 65vh;
+     width: 100vw;
+     display: flex;
+     align-items: center;
+     
+   }
 @media (min-width: 768px){
     .img-det{
         width:450px;

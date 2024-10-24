@@ -29,7 +29,7 @@ function NavBar() {
     }
   };
 
-  console.log(user);
+  
   return (
     <div className="navbar-container">
 

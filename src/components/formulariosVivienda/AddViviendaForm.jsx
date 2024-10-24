@@ -11,6 +11,8 @@ import { IoImageOutline } from "react-icons/io5";
 import { BiMap } from "react-icons/bi";
 import { RiMoneyEuroCircleLine } from "react-icons/ri";
 import { TbFileDescription } from "react-icons/tb";
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 
 function AddViviendaForm() {
@@ -37,7 +39,7 @@ function AddViviendaForm() {
 
     setIsUploading(true);
 
-    // Adiciona várias imagens ao FormData
+    // Añade varias fotos
     const uploadData = new FormData();
     for (let i = 0; i < files.length; i++) {
       uploadData.append("images", files[i]);
@@ -89,7 +91,7 @@ function AddViviendaForm() {
 
   return (
     <div>
-      <div className="title-contain">
+      <div className="title-contain-add">
         {" "}
         <h2 className="form-title-add">Add new apartment</h2>
       </div>
@@ -171,7 +173,7 @@ function AddViviendaForm() {
           ))}
         </div>     
        
-        {isUploading ? <h3>... uploading images</h3> : null}
+        {isUploading ? <h3><ClipLoader /></h3> : null}
         <br />
         <button className="buttonAdd" onClick={handleSubmit} type="submit">
           Save changes

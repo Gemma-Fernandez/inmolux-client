@@ -7,6 +7,8 @@ import { useContext } from "react";
 import service from "../../services/config.js";
 import Carousel from 'react-bootstrap/Carousel';
 import "./ViviendasDetails.css"
+import ClockLoader from "react-spinners/ClockLoader";
+
 
 
 function ViviendasDetails() {
@@ -69,6 +71,9 @@ function ViviendasDetails() {
       setError("There was an error sending your request")
       setSuccess(false)
     }
+  }
+  if(viviendaToShow=== null){
+    return <div className="spinner-container"><p className="spinner"><ClockLoader/></p></div>;
   }
 
   return (

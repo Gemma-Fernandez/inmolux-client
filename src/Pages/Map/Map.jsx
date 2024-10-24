@@ -6,6 +6,8 @@ import React from "react";
 import axios from "axios";
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
 import {Icon} from 'leaflet'
+import ClockLoader from "react-spinners/ClockLoader";
+
 
 function Map() {
   const [viviendas, setViviendas] = useState([]);
@@ -18,7 +20,7 @@ function Map() {
         const response = await axios.get(
           `${import.meta.env.VITE_SERVER_URL}/api/vivienda/`
         );
-        console.log(response.data);
+        
         setViviendas(response.data);
       } catch (error) {
         console.log(error);
@@ -26,10 +28,13 @@ function Map() {
     };
     getData();
   }, []);
-
+    
   const handleTransition = () => {
     setShowMap(true);
   };
+  if(showMap === null){
+      return <ClockLoader/>;
+  }
 
   return (
     <div>

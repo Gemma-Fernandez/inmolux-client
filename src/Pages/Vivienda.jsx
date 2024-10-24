@@ -7,6 +7,7 @@ import { FaHeart } from "react-icons/fa6";
 import { WishlistContext } from "../context/Wishlist.context.jsx";
 import Search from "./Search.jsx";
 import { DataContext } from "../context/Data.context.jsx"
+import ClockLoader from "react-spinners/ClockLoader";
 
 
 function Vivienda() {
@@ -22,7 +23,7 @@ function Vivienda() {
       try {
         const response = await service.get('/vivienda')
         setViviendas(response.data || [])
-        console.log('Viviendas fetched:', response.data);
+        
       } catch (error) {
         console.log(error)
       }
@@ -39,7 +40,7 @@ function Vivienda() {
   }
 
   const dataToDisplay = filteredData.length > 0 ? filteredData : viviendas;
-  console.log(dataToDisplay)
+  
 
   return (
     <>
@@ -71,7 +72,9 @@ function Vivienda() {
             </div>
           ))
         ) : (
-          <p>No se encontraron resultados.</p>
+          <div className="spinner-container">
+          <p className="spinner"><ClockLoader/></p>
+          </div>
         )}
       </div>
     </>

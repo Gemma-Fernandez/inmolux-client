@@ -6,6 +6,7 @@ import service from "../../services/config.js";
 import { DataContext } from "../../context/Data.context";
 import { IoIosCloudDone } from "react-icons/io";
 import './UserProfile.css'
+import ClockLoader from "react-spinners/ClockLoader";
 
 
 
@@ -30,16 +31,16 @@ function UserProfile() {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
-
+        
         setUserData(response.data.user);
         setNewEmail(response.data.user.email || "")
         setNewUserName(response.data.user.username || "")
       } catch (err) {
         console.error(err);
-        setError("Error al buscar los datos del usuario");
+        setError(<ClockLoader/>);
       }
     };
-    console.log(user)
+    
 
 
     fetchUserData()
@@ -59,7 +60,7 @@ function UserProfile() {
   }
 
   if (!userData) {
-    return <div>Loading...</div>;
+    return <div className="spinner-container"><p className="spinner"><ClockLoader/></p></div>;
   }
 
 
@@ -117,7 +118,7 @@ function UserProfile() {
       setErrorMessage("")
     } catch (error) {
       console.error(error);
-      setErrorMessage("Error al actualizar el email");
+      setErrorMessage("Error al actualizar el username");
     }
   };
 

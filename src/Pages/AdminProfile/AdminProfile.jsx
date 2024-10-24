@@ -8,6 +8,8 @@ import { DataContext } from "../../context/Data.context";
 import { TbHomePlus } from "react-icons/tb";
 import { TiDelete } from "react-icons/ti";
 import './AdminProfile.css'
+import ClockLoader from "react-spinners/ClockLoader";
+
 
 
 function AdminProfile() {
@@ -28,18 +30,14 @@ function AdminProfile() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await service.get("/user/profile", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("authToken")}`,
-          },
-        });
+        const response = await service.get("/user/profile")
 
         setUserData(response.data.user);
         setNewEmail(response.data.user.email || "")
         setNewUserName(response.data.user.username || "")
       } catch (err) {
         console.error(err);
-        setError("Error al buscar los datos del usuario");
+        setError(<ClockLoader/>);
       }
     };
     const fetchSolicitudes = async () => {
@@ -65,7 +63,7 @@ function AdminProfile() {
   }
 
   if (!userData) {
-    return <div>Loading...</div>;
+    return <div className="spinner-container"><p className="spinner"><ClockLoader/></p></div>;
   }
 
   const handleEmailChange = (e) => {
@@ -122,7 +120,7 @@ function AdminProfile() {
       setErrorMessage("")
     } catch (error) {
       console.error(error);
-      setErrorMessage("Error al actualizar el email");
+      setErrorMessage("Error al actualizar el username");
     }
   };
 
