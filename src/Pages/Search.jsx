@@ -56,8 +56,9 @@ function Search() {
 
     return (
         <div className='search-container'>
-            
+            <div className='form-container'>
             <h1 className='search-title'>Busca tu casa <RiUserSearchLine className='search-title-icon'/></h1>
+            
             <label className='search-label'>
             Precio Mínimo
             </label>
@@ -124,7 +125,7 @@ function Search() {
                     <br/>
                 <button onClick={handleFilter} className='button-search'>Buscar</button>
         </div>
-        
+        </div>
     )
 }
 
