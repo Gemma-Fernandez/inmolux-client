@@ -29,70 +29,68 @@ function NavBar() {
     }
   };
 
-  
+
   return (
     <div className="navbar-container">
 
-      <Link to="/">
-        <img src={logo1} className="logo1" alt="logo" />
+    <Link to="/">
+      <img src={logo1} className="logo1" alt="logo" />
+    </Link>
+    <div className="navbar-container-icons">
+     
+
+      {isLoggedIn ? (
+        <>
+         <Link to="/vivienda">
+        < ImHome className="icon-vivienda" title="Listado de casas" />
       </Link>
-      <div className="navbar-container-icons">
-       
+          {admin ? (
+            <Link to="/admin/profile" title="Administrator Profile">
+              <FaUserEdit className="icon-vivienda" />
+            </Link>
+          ) : (
+            <Link to="/user/profile" title="User Profile">
+              <FaUserEdit className="icon-vivienda" />
+            </Link>
+          )}
+          <Link to="/">
+            <IoMdLogOut
+              className="icon-vivienda"
+              onClick={logOutUser}
+              title="Logout"
+            />
+          </Link>
 
-        {isLoggedIn ? (
-          <>
-           <Link to="/vivienda">
-          < ImHome className="icon-vivienda" title="Listado de casas" />
-        </Link>
-            {admin ? (
-              <Link to="/admin/profile" title="Administrator Profile">
-                <FaUserEdit className="icon-vivienda" />
-              </Link>
-            ) : (
-              <Link to="/user/profile" title="User Profile" className="search-mobile">
-                <FaUserEdit className="icon-vivienda" />
-              </Link>
-            )}
-            <Link to="/">
-              <IoMdLogOut
-                className="icon-vivienda"
-                onClick={logOutUser}
-                title="Logout"
-              />
-            </Link>
+          <Link to="/vivienda/search" title="Search" className="search-mobile">
+          <IoSearchSharp className="icon-vivienda"/>
+          </Link>
+          
+          <Link to="/user/wishlist" title="wishlist">
+          <Wishlist className='whish-button'/>
+          </Link>
 
-            <Link to="/vivienda/search" title="Search" className="search-mobile">
-            <IoSearchSharp className="icon-vivienda"/>
-            </Link>
-            
-            <Link to="/user/wishlist" title="wishlist">
-            <Wishlist className='whish-button'/>
-            </Link>
-
-           
-          </>
-        ) : (
-          <>
-           <Link to="/vivienda"  title="Listado de casas">
-          <ImHome className="icon-vivienda" />
-        </Link>
-            <Link to="/login">
-              <FaUser className="icon-vivienda" />
-            </Link>
-            <Link to="/signup">
-              <FaUserPlus  className="icon-vivienda" title="Signup" />
-            </Link>
-            <Link to="/vivienda/search" title="Search">
-            <IoSearchSharp className="icon-vivienda"/>
-            </Link>
-          </>
-        )}
-        
-      </div>
+         
+        </>
+      ) : (
+        <>
+         <Link to="/vivienda"  title="Listado de casas">
+        <ImHome className="icon-vivienda" />
+      </Link>
+          <Link to="/login">
+            <FaUser className="icon-vivienda" />
+          </Link>
+          <Link to="/signup">
+            <FaUserPlus  className="icon-vivienda" title="Signup" />
+          </Link>
+        </>
+      )}
+      
     </div>
-  );
+  </div>
+);
 }
 
 export default NavBar;
 
- 
+
+

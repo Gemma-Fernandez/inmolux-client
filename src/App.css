@@ -150,13 +150,14 @@
 
 .video-container {
   position: absolute;
-  top: 5rem;
+  top: 8rem;
   left: 0;
   width: 100%;
   height: auto; 
   overflow: hidden;
   opacity: 0.9;
-  box-shadow: 1px 10px 20px rgb(129, 127, 127);
+  box-shadow: 0 5px 30px rgba(34, 103, 105, 0.89), 0 0 20px rgba(251, 251, 252, 0.4);
+  
 }
 
 .video-container video {
@@ -188,17 +189,28 @@
   
 }
 
-@media (min-width: 1040px){
+@media (max-width: 768px){
   .video-container {
     position: absolute;
-    top: 8rem;
-   
-    width: 100%;
-    height: auto; 
-    overflow: hidden;
-    opacity: 0.9;
-    z-index: 0; 
-    box-shadow: 1px 10px 10px 20px rgb(129, 127, 127);
+    top: 6.6rem;
+  }
+  
+  .title-home{
+    position: relative;
+    z-index: 1; 
+    text-align: center;
+    color: rgba(252, 251, 251, 0.635);
+    text-shadow: 2px 1px 10px #000000;
+    letter-spacing: 2px;
+    margin-top: 80px; 
+    animation: fadeInUp 3.5s ease-in-out;
+  }
+}
+
+@media (min-width: 768px){
+  .video-container {
+    position: absolute;
+    top: 6.6rem;
     margin: auto;
   }
   
@@ -212,7 +224,6 @@
     position: relative;
     z-index: 1; 
     text-align: center;
-    color: rgba(252, 251, 251, 0.564);
     text-shadow: 2px 1px 10px #000000;
     letter-spacing: 2px;
     margin-top: 15rem; 
@@ -236,105 +247,112 @@
 /*Navbar*/
 
 .navbar-container {
-display:flex;
-justify-content: space-between;
-align-items: center;
-padding: 5px;
-background: url("./images/ventana.jpg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-opacity: 0.9;
-z-index: 1;
-}
-
-.logo1 {
-  width: 120px;
-  height: auto;
-  text-align: left;
-  margin-top: 20px;
-}
-
-.navbar-container-icons {
   display:flex;
-  gap: 4px;
-}
-
-
-.icon-vivienda {
-  color: rgb(245, 243, 240);
-  width: 30px;
-height: 20px;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-  .navbar-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: url("./images/ventana.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  z-index: 1;
+  height: 100px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 246, 255, 0.6), 0 0 20px rgba(251, 251, 252, 0.4);
+  }
+  
+  .logo1 {
+    width: 120px;
+    height: auto;
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .navbar-container-icons {
     display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    background: url("./images/ventana.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.9;
-    z-index: -1;
-    }
-    
-    .logo1 {
-      width: 120px;
-      height: auto;
-      text-align: left;
-      margin-top: 20px;
-    }
-    
-    .navbar-container-icons {
-      display:flex;
-      gap: 4px;
-    }
-    
-    
-    .icon-vivienda {
-      color: rgb(245, 243, 240);
-      font-size: 20px;
-      cursor: pointer;
-      
-    }
-    
-}
-
-@media (min-width: 1024px) {
-  .navbar-container {
-    display:flex;
-    flex-direction: row;
-    opacity: 0.9;
-    z-index: -1;
-    width: 100%;
-    
-    
-    }
-    .navbar-container-icons {
+    gap: 4px;
+  }
+  
+  
+  .icon-vivienda {
+    color: rgb(245, 243, 240);
+    width: 30px;
+  height: 20px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
       display:flex;
       flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      background: url("./images/ventana.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.9;
+      z-index: -1;
+      height: 100px;
+      width: 100%;
+      }
       
-    }
+      .logo1 {
+        width: 120px;
+        height: auto;
+        text-align: left;
+        margin-top: 20px;
+      }
+      
+      .navbar-container-icons {
+        display:flex;
+        gap: 4px;
+      }
+      
+      
+      
+        .icon-vivienda {
+          color: rgb(245, 243, 240);
+          width: 30px;
+        height: 20px;
+          cursor: pointer;
+          margin-top: 40px;
+        }
+        
+      }
     
-    .logo1 {
-      width: 150px;
+  
+  @media (min-width: 1024px) {
+    .navbar-container {
+      height: 100px;
+      width: 100%;
+      }
+      .navbar-container-icons {
+        display:flex;
+        flex-direction: row;
+        
+      }
+      
+      .logo1 {
+        width: 120px;
+  
+      }
+      
+      
+        .icon-vivienda {
+          color: rgb(245, 243, 240);
+          width: 30px;
+        height: 20px;
+          cursor: pointer;
+          margin-top: 40px;
+        }
+      }
+  
 
-    }
-    
-    .icon-vivienda {
-      width: 30px;
-      height: auto;
-      cursor: pointer;
-      margin-top: 4.5rem;
-     margin-right: 2rem;
-    }
-}
+  
 
 /*-----only mobiles page -----*/
 .search-mobile {
@@ -655,38 +673,39 @@ cursor: pointer;
 /*------ search mobile page -------*/
 /*small*/
 @media (max-width: 768px){
-.search-container{
-  position: relative;
-  width: 100%;
+.search-container {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; 
-  overflow: hidden;
-}
-.search-container::before {
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   background: url('./images/background-search-mobile.avif') center center no-repeat;
   background-size: cover;
-  opacity: 0.4; 
-  z-index: 0; 
-  pointer-events: none;
+}
+
+.form-container{
+  min-width: 250px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 0 10px rgba(251, 251, 252, 0.4);
 }
 
 .search-title {
-  font-size: 30px;
+  font-size: 20px;
   color: #196D7A;
   font-weight: lighter;
   font-family: "Fjalla One", serif;
   letter-spacing: 2px;
   text-shadow: 2px 1px 10px  #088da1;
   margin-top: 20px;
+  text-align: center;
 }
 .search-title-icon {
   margin-bottom: 5px;
@@ -705,26 +724,21 @@ cursor: pointer;
   align-items: center;
   margin: auto;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: rgb(5, 5, 5);
-  font-weight: lighter;
   font-style: italic;
   text-shadow: 2px 1px 10px  #088da1;
-  padding-right: 10px;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
   
 }
 
 .search-input{
   background-color: rgba(255, 255, 255, 0.854);
-  cursor: pointer;
   color: rgb(0, 0, 0); 
   border: none; 
-  border-radius: 20px;
-  padding: 10px 30px;
-  
-  border: 1px solid #e4e5e6;
+  border-radius: 10px;
+  max-width: 150px;
   box-shadow: 0 2px 20px  rgba(7, 161, 172, 0.5);
   text-align: center;
 }
@@ -739,13 +753,12 @@ cursor: pointer;
   font-weight: lighter;
   font-style: italic;
   text-shadow: 2px 1px 10px  #088da1;
-  padding-right: 10px;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
+  letter-spacing: 2px;
   border-radius: 20px;
   background-color:#fbfbff;
   box-shadow: 0 2px 20px  rgba(7, 161, 172, 0.5);
   border: 2px solid black;
+  max-width: 150px;
 }
 
 .search-option{
@@ -753,7 +766,6 @@ font-size: 10px;
 }
 
 .button-search{
-  
   background: linear-gradient(90deg, #055461, #2b2b2c);
   border: none;
   border-radius: 5px;
@@ -762,14 +774,12 @@ font-size: 10px;
   color: white;
   padding: 5px;
   font-size: 15px;
-  cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 246, 255, 0.6), 0 0 10px rgba(0, 71, 255, 0.4);
-  position: relative;
   overflow: hidden;
-  min-width: 200px;
+  min-width: 100px;
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  min-width: 40%;
+ margin-bottom: 20px;
 }
 
 .search-title,

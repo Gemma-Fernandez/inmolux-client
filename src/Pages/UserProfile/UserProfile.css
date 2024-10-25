@@ -9,7 +9,7 @@
   margin: auto;
   overflow: hidden;
   padding: 0;
-  gap: 3rem;
+  gap: 2rem;
   position: relative;
 }
 .profile-container::before {
@@ -56,9 +56,9 @@
 
 .image {
   width: 100%;
-  max-width: 150px;
+  max-width: 200px;
   height: auto;
-  border-radius: 100%;
+  border-radius: 10px;
   margin-top: 20px;
   box-shadow: 2px 1px 20px #ffffff;
   transition: transform 0.3s ease-in-out;
@@ -220,12 +220,13 @@
   .profile-container {
     padding: 0;
     margin-bottom: 0;
+    height: auto;
   }
   .image {
     width: 100%;
-    max-width: 100px;
+    max-width: 150px;
     height: auto;
-    border-radius: 100%;
+    border-radius: 10px;
     margin-top: 20px;
     box-shadow: 2px 1px 20px #ffffff;
     transition: transform 0.3s ease-in-out;
