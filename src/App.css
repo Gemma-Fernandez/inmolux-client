@@ -829,6 +829,9 @@ font-size: 10px;
     font-size: 14px;
     width: 100%;
     margin:3px;
+    text-align: center;
+  box-shadow:5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   }
   .button-search{
     margin-top: 10px;
@@ -846,6 +849,7 @@ font-size: 10px;
   }
 }
 /*-------Validating-----*/
+@media (min-width: 700){
 .validating-user{
   height: 100vh;
   width: 100vw;
@@ -855,12 +859,16 @@ font-size: 10px;
   background-image: url('./images/mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
-
+}
 @media (min-width: 1024px){
 .validating-user {
-  background-image: url('./images/computer.jpg');
+  background-color: white;
+
+}
+
+.please-await{
+ color: #197482 ;
 }
 }
 

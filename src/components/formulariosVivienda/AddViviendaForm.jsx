@@ -103,6 +103,7 @@ function AddViviendaForm() {
           value={name}
           onChange={(event) => setName(event.target.value)}
           placeholder="name"
+          className="placeholder-add"
         />
         <br />
         <label><BiMap />City:</label>
@@ -112,6 +113,7 @@ function AddViviendaForm() {
           value={city}
           onChange={(event) => setCity(event.target.value)}
           placeholder="city"
+          className="placeholder-add"
         />
         <br />
         <label><TbFileDescription />Description:</label>
@@ -122,6 +124,7 @@ function AddViviendaForm() {
           value={description}
           onChange={(event) => setDescription(event.target.value)}
           placeholder="description"
+          className="placeholder-add"
         />
         <br />
         <label>Property type:</label>
@@ -131,6 +134,7 @@ function AddViviendaForm() {
           value={property_type}
           onChange={(event) => setProperty_type(event.target.value)}
           placeholder="Porperty type"
+          className="placeholder-add"
         />
         <br />
         <label>Bathrooms:</label>
@@ -140,6 +144,7 @@ function AddViviendaForm() {
           value={bathrooms}
           onChange={(event) => setBathrooms(event.target.value)}
           placeholder="Bathrooms"
+          className="placeholder-add"
         />
         <br />
         <label>Bedrooms:</label>
@@ -149,6 +154,7 @@ function AddViviendaForm() {
           value={bedrooms}
           onChange={(event) => setBedrooms(event.target.value)}
           placeholder="bedrooms"
+          className="placeholder-add"
         />
         <br />
         <label><RiMoneyEuroCircleLine />Price:</label>
@@ -158,6 +164,7 @@ function AddViviendaForm() {
           value={price}
           onChange={(event) => setPrice(event.target.value)}
           placeholder="Price"
+          className="placeholder-add"
         />
         <br />
         <label><IoImageOutline />Images:</label>
@@ -166,6 +173,7 @@ function AddViviendaForm() {
           multiple
           onChange={handleFileUpload}         
           disabled={isUploading}
+          className="placeholder-add"
         />
         <div>
           {imageUrls.map((url, index) => (

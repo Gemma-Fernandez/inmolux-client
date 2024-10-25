@@ -1,6 +1,8 @@
 import React, { useState, useEffect, createContext } from "react";
 import service from "../services/config.js";
 const AuthContext = createContext();
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 function AuthWrapper({children}) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -47,7 +49,8 @@ function AuthWrapper({children}) {
     setAdmin
   };
   if (isValidatingToken) {
-    return <div className="validating-user"></div>;
+    return <div className="validating-user">
+    <h2 className="please-await"><ClipLoader /> Please await </h2></div>;
   }
 
   return (

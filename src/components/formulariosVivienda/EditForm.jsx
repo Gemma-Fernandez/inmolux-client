@@ -86,6 +86,7 @@ function EditForm() {
           value={name}
           onChange={(event)=> setName(event.target.value)}
           placeholder="name"
+          className="placeholder-add"
         />
         <br />
         <label>Image:</label>
@@ -95,6 +96,7 @@ function EditForm() {
           value={image}
           onChange={(event)=> setImage(event.target.value)}
           placeholder="image"
+          className="placeholder-add"
         />
         <br />
         <label>City:</label>
@@ -104,6 +106,7 @@ function EditForm() {
           value={city}
           onChange={(event)=> setCity(event.target.value)}
           placeholder="city"
+          className="placeholder-add"
         />
         <br />
         <label>Description:</label>
@@ -114,6 +117,7 @@ function EditForm() {
           value={description}
           onChange={(event)=> setDescription(event.target.value)}
           placeholder="description"
+          className="placeholder-add"
         />
         <br />
         <label>Property type:</label>
@@ -123,6 +127,7 @@ function EditForm() {
           value={property_type}
           onChange={(event)=> setProperty_type(event.target.value)}
           placeholder="Porperty type"
+          className="placeholder-add"
         />
         <br />
         <label>Bathrooms:</label>
@@ -132,6 +137,7 @@ function EditForm() {
           value={bathrooms}
           onChange={(event)=> setBathrooms(event.target.value)}
           placeholder="Bathrooms"
+          className="placeholder-add"
         />
         <br />
         <label>Bedrooms:</label>
@@ -141,6 +147,7 @@ function EditForm() {
           value={bedrooms}
           onChange={(event)=> setBedrooms(event.target.value)}
           placeholder="bedrooms"
+          className="placeholder-add"
         />
         <br />
         <label>Price:</label>
@@ -150,6 +157,7 @@ function EditForm() {
           value={price}
           onChange={(event)=> setPrice(event.target.value)}
           placeholder="Price"
+          className="placeholder-add"
         />
         <br />
         <button onClick={handleSubmit} type="submit" className="buttonAdd">Save change</button>
