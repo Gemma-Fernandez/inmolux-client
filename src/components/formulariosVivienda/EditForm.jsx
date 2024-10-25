@@ -152,7 +152,7 @@ function EditForm() {
           placeholder="Price"
         />
         <br />
-        <button onClick={handleSubmit} type="submit">Save change</button>
+        <button onClick={handleSubmit} type="submit" className="buttonAdd">Save change</button>
       </form>
     </div>
   );
